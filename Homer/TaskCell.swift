@@ -12,15 +12,21 @@ class TaskCell: UITableViewCell {
 
     
     @IBOutlet var CategoryIcon: UIImageView!
-    @IBOutlet var DescriptionText: UITextField!
     @IBOutlet var EcoPointsText: UILabel!
     @IBOutlet var SavingsText: UILabel!
+    @IBOutlet var DescriptionText: UILabel!
+    @IBOutlet var CheckButton: UIButton!
     
     
+    @IBAction func checkPressed(_ sender: UIButton) {
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
