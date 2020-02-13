@@ -101,12 +101,11 @@
 		23543D0323F45EB60080BDFE /* Homer */ = {
 			isa = PBXGroup;
 			children = (
+				9AF8D8B223F594A30030FCF1 /* Storyboards */,
 				23543D0423F45EB60080BDFE /* AppDelegate.swift */,
-				23543D0623F45EB60080BDFE /* SceneDelegate.swift */,
 				23543D0823F45EB60080BDFE /* ViewController.swift */,
-				23543D0A23F45EB60080BDFE /* Main.storyboard */,
+				23543D0623F45EB60080BDFE /* SceneDelegate.swift */,
 				23543D1023F45EB60080BDFE /* Assets.xcassets */,
-				23543D1223F45EB60080BDFE /* LaunchScreen.storyboard */,
 				23543D1523F45EB60080BDFE /* Info.plist */,
 				23543D0D23F45EB60080BDFE /* Homer.xcdatamodeld */,
 			);
@@ -129,6 +128,39 @@
 				23543D2B23F45EB70080BDFE /* Info.plist */,
 			);
 			path = HomerUITests;
+			sourceTree = "<group>";
+		};
+		9AF8D8B223F594A30030FCF1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9AF8D8B523F599C20030FCF1 /* Main */,
+				9AF8D8B423F595D50030FCF1 /* LaunchScreen */,
+				9AF8D8B323F595150030FCF1 /* Home */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9AF8D8B323F595150030FCF1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		9AF8D8B423F595D50030FCF1 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				23543D1223F45EB60080BDFE /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		9AF8D8B523F599C20030FCF1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23543D0A23F45EB60080BDFE /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
