@@ -10,6 +10,14 @@ import UIKit
 
 class TaskCell: UITableViewCell {
 
+    
+    @IBOutlet var CategoryIcon: UIImageView!
+    @IBOutlet var DescriptionText: UITextField!
+    @IBOutlet var EcoPointsText: UILabel!
+    @IBOutlet var SavingsText: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
