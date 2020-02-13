@@ -10,7 +10,6 @@
         <!--Todos-->
         <scene sceneID="vkr-42-DJ6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XIs-Tc-fZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Home" id="AdH-PX-4Hw" customClass="ViewController" customModule="Homer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iS8-VD-I3D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -31,10 +30,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Todos" id="Hjn-7r-2Wn"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIs-Tc-fZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997.10144927536237" y="2.6785714285714284"/>
         </scene>
-        <!--Task Table View Controller-->
+        <!--Todos-->
         <scene sceneID="RJy-Rh-6W1">
             <objects>
                 <tableViewController id="h9D-gg-ipo" customClass="TaskTableViewController" customModule="Homer" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <outlet property="delegate" destination="h9D-gg-ipo" id="OgN-5U-kZ5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OkV-Kt-mPv"/>
+                    <navigationItem key="navigationItem" title="Todos" id="OkV-Kt-mPv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ5-VY-Z5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
