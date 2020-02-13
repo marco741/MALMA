@@ -9,7 +9,7 @@
 import UIKit
 
 class TaskCell: UITableViewCell {
-
+    
     
     @IBOutlet var CategoryIcon: UIImageView!
     @IBOutlet var EcoPointsText: UILabel!
@@ -19,20 +19,22 @@ class TaskCell: UITableViewCell {
     
     
     @IBAction func checkPressed(_ sender: UIButton) {
-        
+        CheckButton.isSelected.toggle()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        CheckButton.setImage(UIImage(systemName: "circle"), for: .normal)
+        CheckButton.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .selected)
         
-       
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
