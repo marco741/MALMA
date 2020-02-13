@@ -27,7 +27,7 @@
         <!--Home-->
         <scene sceneID="r43-PJ-52J">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="iCH-0D-0oz" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" id="iCH-0D-0oz" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="YLO-ed-OP9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOm-iF-IMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

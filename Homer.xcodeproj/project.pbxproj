@@ -105,7 +105,6 @@
 			children = (
 				9AF8D8B223F594A30030FCF1 /* Storyboards */,
 				23543D0423F45EB60080BDFE /* AppDelegate.swift */,
-				23543D0823F45EB60080BDFE /* ViewController.swift */,
 				23543D0623F45EB60080BDFE /* SceneDelegate.swift */,
 				23543D1023F45EB60080BDFE /* Assets.xcassets */,
 				23543D1523F45EB60080BDFE /* Info.plist */,
@@ -145,6 +144,7 @@
 		9AF8D8B323F595150030FCF1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				23543D0823F45EB60080BDFE /* ViewController.swift */,
 				6B81B9D723F59BBF000BFB0A /* Home.storyboard */,
 			);
 			name = Home;
