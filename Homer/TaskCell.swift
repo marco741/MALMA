@@ -19,11 +19,10 @@ class TaskCell: UITableViewCell {
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
     
-    /*
     @IBAction func checkPressed(_ sender: UIButton) {
         CheckButton.isSelected.toggle()
     }
-    */
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
