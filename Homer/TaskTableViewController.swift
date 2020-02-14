@@ -41,7 +41,7 @@ class TaskTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath) as! TaskCell
 
-//        cell.task = TaskMock(.ENERGIA, "Chiur a luc", 30, 0.05)
+        cell.task = TaskMock(.ENERGIA, "Chiur a luc", 30, 0.05)
         
         
         return cell
