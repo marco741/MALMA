@@ -34,6 +34,9 @@
 		235EF74323F6D1B2006EAD45 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF73D23F6D1B2006EAD45 /* PMUser.swift */; };
 		235EF74423F6D1B2006EAD45 /* PMCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF73E23F6D1B2006EAD45 /* PMCategory.swift */; };
 		235EF74523F6D1B2006EAD45 /* PMDoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF73F23F6D1B2006EAD45 /* PMDoneTask.swift */; };
+		235EF74723F6D72C006EAD45 /* Populator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF74623F6D72C006EAD45 /* Populator.swift */; };
+		235EF74A23F6DB3C006EAD45 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 235EF74923F6DB3C006EAD45 /* categories.json */; };
+		235EF74C23F6DD7D006EAD45 /* task.json in Resources */ = {isa = PBXBuildFile; fileRef = 235EF74B23F6DD7D006EAD45 /* task.json */; };
 		6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9D723F59BBF000BFB0A /* Home.storyboard */; };
 		6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */; };
 		6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */; };
@@ -95,6 +98,9 @@
 		235EF73D23F6D1B2006EAD45 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		235EF73E23F6D1B2006EAD45 /* PMCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMCategory.swift; sourceTree = "<group>"; };
 		235EF73F23F6D1B2006EAD45 /* PMDoneTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMDoneTask.swift; sourceTree = "<group>"; };
+		235EF74623F6D72C006EAD45 /* Populator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Populator.swift; sourceTree = "<group>"; };
+		235EF74923F6DB3C006EAD45 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		235EF74B23F6DD7D006EAD45 /* task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = task.json; sourceTree = "<group>"; };
 		6B81B9D723F59BBF000BFB0A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 		23543D0323F45EB60080BDFE /* Homer */ = {
 			isa = PBXGroup;
 			children = (
+				235EF74823F6DADF006EAD45 /* DBInit */,
 				235EF73923F6D19B006EAD45 /* PersistenceMenegers */,
 				235EF73823F6D122006EAD45 /* DAO */,
 				9AF8D8B223F594A30030FCF1 /* Storyboards */,
@@ -211,8 +218,18 @@
 				235EF73A23F6D1B2006EAD45 /* PMGoal.swift */,
 				235EF73B23F6D1B2006EAD45 /* PMTask.swift */,
 				235EF73D23F6D1B2006EAD45 /* PMUser.swift */,
+				235EF74623F6D72C006EAD45 /* Populator.swift */,
 			);
 			name = PersistenceMenegers;
+			sourceTree = "<group>";
+		};
+		235EF74823F6DADF006EAD45 /* DBInit */ = {
+			isa = PBXGroup;
+			children = (
+				235EF74B23F6DD7D006EAD45 /* task.json */,
+				235EF74923F6DB3C006EAD45 /* categories.json */,
+			);
+			path = DBInit;
 			sourceTree = "<group>";
 		};
 		6B81B9E323F6ABC2000BFB0A /* Categories */ = {
@@ -377,9 +394,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235EF74A23F6DB3C006EAD45 /* categories.json in Resources */,
 				6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */,
 				6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */,
 				23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */,
+				235EF74C23F6DD7D006EAD45 /* task.json in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
 				6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */,
@@ -423,6 +442,7 @@
 				235EF72F23F6D11D006EAD45 /* Achievement+CoreDataProperties.swift in Sources */,
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,
 				235EF73023F6D11D006EAD45 /* Goal+CoreDataClass.swift in Sources */,
+				235EF74723F6D72C006EAD45 /* Populator.swift in Sources */,
 				235EF73323F6D11D006EAD45 /* Task+CoreDataProperties.swift in Sources */,
 				235EF73223F6D11D006EAD45 /* Task+CoreDataClass.swift in Sources */,
 				235EF72E23F6D11D006EAD45 /* Achievement+CoreDataClass.swift in Sources */,

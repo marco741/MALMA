@@ -13,7 +13,7 @@ import UIKit
 
 class PMTask{
     
-    static let name = "Task"
+    static let tableName = "Task"
     
     static func getContext() -> NSManagedObjectContext{
         
@@ -23,10 +23,10 @@ class PMTask{
         
     }
     
-    static func newTaskt(desc: String, ecoPoint: Int32, savings: Float, state:String, weekly: Bool, categoty: Category) -> Task{
+    static func newTask(desc: String, ecoPoint: Int32, savings: Float, state:String, weekly: Bool, categoty: Category) -> Task{
         let context = getContext()
         
-        let task = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Task
+        let task = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Task
         
         task.desc = desc
         task.doneNum = 0
@@ -46,7 +46,7 @@ class PMTask{
         
         let context = getContext()
         
-        let fetchRequest = NSFetchRequest<Task>(entityName: name)
+        let fetchRequest = NSFetchRequest<Task>(entityName: tableName)
         
         do{
             

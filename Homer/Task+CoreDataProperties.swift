@@ -10,6 +10,8 @@
 import Foundation
 import CoreData
 
+import UIKit
+
 
 extension Task {
 
@@ -28,12 +30,12 @@ extension Task {
     
     
     func getIcon(_ desaturated: Bool) -> UIImage?{
-        var iconName = category.image
+        let iconName = category!.image
         if(desaturated){
-            return UIImage(named:iconName+"_desaturated")
+            return UIImage(named: iconName!+"_desaturated")
         }
         else{
-            return UIImage(named:iconName)
+            return UIImage(named: iconName!)
         }
     }
     

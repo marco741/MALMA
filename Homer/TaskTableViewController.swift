@@ -67,7 +67,7 @@ class TaskTableViewController: UITableViewController {
         }
  */
         
-        cell.task = Task(.ENERGIA, "Chiur a luc", 30, 0.05)
+//        cell.task = Task(.ENERGIA, "Chiur a luc", 30, 0.05)
         
         
         return cell

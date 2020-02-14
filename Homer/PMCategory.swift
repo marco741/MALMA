@@ -13,7 +13,7 @@ import UIKit
 
 class PMCategory{
     
-    static let name = "Category"
+    static let tableName = "Category"
     
     static func getContext() -> NSManagedObjectContext{
         
@@ -26,7 +26,7 @@ class PMCategory{
     static func newCategory(imageName: String, name: String) -> Category{
         let context = getContext()
         
-        let category = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Category
+        let category = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Category
         
         category.image = imageName
         category.name = name
@@ -40,7 +40,7 @@ class PMCategory{
         
         let context = getContext()
         
-        let fetchRequest = NSFetchRequest<Category>(entityName: name)
+        let fetchRequest = NSFetchRequest<Category>(entityName: tableName)
         
         do{
             
@@ -56,6 +56,33 @@ class PMCategory{
         
     }
     
+    static func fetchByName(name: String) -> [Category]{
+        var categories: [Category] = []
+        
+        let context = getContext()
+        
+        let pred = NSPredicate(format: "name = %@", name)
+        
+        let fetchRequest = NSFetchRequest<Category>(entityName: tableName)
+        
+        fetchRequest.predicate = pred
+        
+        do{
+            
+            
+            try categories = context.fetch(fetchRequest)
+            
+        } catch let error as NSError{
+            
+            print("Errore in fetch \(error.code)")
+            
+        }
+        
+        return categories
+        
+    }
+    
+    
     static func saveContext() {
         let context = getContext()
         
@@ -69,6 +96,7 @@ class PMCategory{
             
         }
     }
+    
     
     
     static func deleteCategory(category: Category){

@@ -13,7 +13,7 @@ import UIKit
 
 class PMUser{
     
-    static let name = "User"
+    static let tableName = "User"
     
     static func getContext() -> NSManagedObjectContext{
         
@@ -26,7 +26,7 @@ class PMUser{
     static func newUser() -> User{
         let context = getContext()
         
-        let user = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! User
+        let user = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! User
         
         user.totEcoPoints = 0
         user.totSavings = 0
@@ -39,7 +39,7 @@ class PMUser{
         
         let context = getContext()
         
-        let fetchRequest = NSFetchRequest<User>(entityName: name)
+        let fetchRequest = NSFetchRequest<User>(entityName: tableName)
         
         do{
             

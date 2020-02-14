@@ -13,7 +13,7 @@ import UIKit
 
 class PMGoal{
     
-    static let name = "Goal"
+    static let tableName = "Goal"
     
     static func getContext() -> NSManagedObjectContext{
         
@@ -26,7 +26,7 @@ class PMGoal{
     static func newGoal(task: Task, achivement: Achievement, goalNum: Int) -> Goal{
         let context = getContext()
         
-        let goal = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Goal
+        let goal = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Goal
         
         goal.goal =  Int32(goalNum)
         goal.task = task
@@ -41,7 +41,7 @@ class PMGoal{
         
         let context = getContext()
         
-        let fetchRequest = NSFetchRequest<Goal>(entityName: name)
+        let fetchRequest = NSFetchRequest<Goal>(entityName: tableName)
         
         do{
             

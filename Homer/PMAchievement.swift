@@ -13,7 +13,7 @@ import UIKit
 
 class PMAchievement{
     
-    static let name = "Achievement"
+    static let tableName = "Achievement"
     
     static func getContext() -> NSManagedObjectContext{
         
@@ -26,7 +26,7 @@ class PMAchievement{
     static func newAchievement(imageName: String, name: String) -> Achievement{
         let context = getContext()
         
-        let achievement = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Achievement
+        let achievement = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Achievement
         
         achievement.image = imageName
         achievement.name = name
@@ -42,7 +42,7 @@ class PMAchievement{
         
         let context = getContext()
         
-        let fetchRequest = NSFetchRequest<Achievement>(entityName: name)
+        let fetchRequest = NSFetchRequest<Achievement>(entityName: tableName)
         
         do{
             

@@ -13,7 +13,7 @@ import UIKit
 
 class PMDoneTask{
     
-    static let name = "DoneTask"
+    static let tableName = "DoneTask"
     
     static func getContext() -> NSManagedObjectContext{
         
@@ -26,10 +26,10 @@ class PMDoneTask{
     static func newDoneTask(task: Task) -> DoneTask{
         let context = getContext()
         
-        let doneTask = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! DoneTask
+        let doneTask = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! DoneTask
         
         doneTask.doneDate = Date()
-        doneTask.membership = task
+        doneTask.task = task
         return doneTask
     }
     
@@ -38,7 +38,7 @@ class PMDoneTask{
         
         let context = getContext()
         
-        let fetchRequest = NSFetchRequest<DoneTask>(entityName: name)
+        let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
         
         do{
             

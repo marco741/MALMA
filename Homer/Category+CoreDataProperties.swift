@@ -20,6 +20,10 @@ extension Category {
     @NSManaged public var image: String?
     @NSManaged public var name: String?
     @NSManaged public var tasks: NSSet?
+    
+    func addTask(task: Task){
+        self.addToTasks(task)
+    }
 
 }
 
