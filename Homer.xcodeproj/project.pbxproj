@@ -16,6 +16,7 @@
 		23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23543D1223F45EB60080BDFE /* LaunchScreen.storyboard */; };
 		23543D1F23F45EB70080BDFE /* HomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543D1E23F45EB70080BDFE /* HomerTests.swift */; };
 		23543D2A23F45EB70080BDFE /* HomerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543D2923F45EB70080BDFE /* HomerUITests.swift */; };
+		333D690723F6EB9300DB24A6 /* CategoryTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D690623F6EB9300DB24A6 /* CategoryTasksCell.swift */; };
 		33F3200E23F6B99200BAF01A /* CategoryTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */; };
 		33F3201023F6C7DA00BAF01A /* RotatedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */; };
 		6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9D723F59BBF000BFB0A /* Home.storyboard */; };
@@ -61,6 +62,7 @@
 		23543D2523F45EB70080BDFE /* HomerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23543D2923F45EB70080BDFE /* HomerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomerUITests.swift; sourceTree = "<group>"; };
 		23543D2B23F45EB70080BDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333D690623F6EB9300DB24A6 /* CategoryTasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTasksCell.swift; sourceTree = "<group>"; };
 		33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryTasks.storyboard; sourceTree = "<group>"; };
 		33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedUILabel.swift; sourceTree = "<group>"; };
 		6B81B9D723F59BBF000BFB0A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */,
 				33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */,
+				333D690623F6EB9300DB24A6 /* CategoryTasksCell.swift */,
 			);
 			name = CategoryTasks;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				23543D0523F45EB60080BDFE /* AppDelegate.swift in Sources */,
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,
 				90259D4123F5A30E00926738 /* TaskCell.swift in Sources */,
+				333D690723F6EB9300DB24A6 /* CategoryTasksCell.swift in Sources */,
 				23543D0723F45EB60080BDFE /* SceneDelegate.swift in Sources */,
 				90048EBD23F6A3A20089600B /* CategoryCollectionViewController.swift in Sources */,
 			);

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="HGj-6e-WeM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="HGj-6e-WeM" customClass="CategoryTasksCell" customModule="Homer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HGj-6e-WeM" id="bOV-fc-0Rh">
@@ -82,6 +82,13 @@
                                         <constraint firstItem="Gi2-5v-RuS" firstAttribute="top" secondItem="bOV-fc-0Rh" secondAttribute="topMargin" constant="20" id="ilj-SH-3hr"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkbox" destination="xkI-Gx-OAh" id="H7k-m6-O7d"/>
+                                    <outlet property="descriptionLabel" destination="Gi2-5v-RuS" id="tBn-IZ-WOA"/>
+                                    <outlet property="ecoPointsLabel" destination="YHh-a6-myn" id="iGW-gp-uQJ"/>
+                                    <outlet property="savingsLabel" destination="9Qc-vl-7ss" id="qNO-Cx-L3P"/>
+                                    <outlet property="weeklyLabel" destination="Jeg-xJ-Gna" id="x53-m0-2JE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
