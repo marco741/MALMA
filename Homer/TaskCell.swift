@@ -20,7 +20,7 @@ class TaskCell: UITableViewCell {
     var task : TaskMock? {
         willSet{
             if let cellTask = newValue{
-//               CategoryIcon.image = cellTask.getIcon()
+               CategoryIcon.image = cellTask.getIcon()
                EcoPointsText.text = String(cellTask.ecoPoints) + "EP"
                SavingsText.text = String(cellTask.savings) + "$"
                DescriptionText.text = cellTask.description
