@@ -16,6 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var users = PMUser.fetchAllUsers()
+         
+         
+         
+         // CREO UN NUOVO UTENTE SE NON ESISTE
+         
+        /* if users.count == 0{
+
+             let u = PMUser.newUser()
+
+             PMUser.saveContext()
+
+
+         }*/
+        
+        
         return true
     }
 
