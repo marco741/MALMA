@@ -12,8 +12,14 @@ private let reuseIdentifier = "Cell"
 
 class CategoryCollectionViewController: UICollectionViewController {
 
+    @IBOutlet var categoriesCollectionView: UICollectionView!
+    
+    let categoriesDataSource = CategoriesDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        categoriesCollectionView.dataSource = categoriesDataSource
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,17 +44,17 @@ class CategoryCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 3
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath)
     
         // Configure the cell
     
