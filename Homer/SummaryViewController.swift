@@ -24,6 +24,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         return cell
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
 
     
     @IBOutlet var achievementCollection: UICollectionView!
