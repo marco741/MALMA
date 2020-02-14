@@ -41,32 +41,6 @@ class TaskTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath) as! TaskCell
         
-        /*
-        let number = Int.random(in: 0...4)
-        let cellImageView = cell.CategoryIcon
-        
-        switch number{
-        case 0:
-            cellImageView?.image = UIImage(named: "food")
-
-        case 1:
-            cellImageView?.image = UIImage(named: "water")
-
-        case 2:
-            cellImageView?.image = UIImage(named: "energy")
-
-        case 3:
-            cellImageView?.image = UIImage(named: "transport")
-
-        case 4:
-            cellImageView?.image = UIImage(named: "garbage")
-            
-        default:
-            break
-            
-        }
- */
-        
         cell.task = TaskMock(.ENERGIA, "Chiur a luc", 30, 0.05)
         
         
@@ -74,15 +48,15 @@ class TaskTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -92,7 +66,7 @@ class TaskTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
