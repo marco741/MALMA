@@ -7,18 +7,43 @@
 //
 
 import Foundation
+import UIKit
 
-struct Task {
+class Task {
     let savings : Float
     let description : String
     let ecoPoints : Int
     let category : TaskCategory
+    
+    init(_ category : TaskCategory, _ description: String, _ ecoPoints: Int, _ savings: Float){
+        self.category = category
+        self.description = description
+        self.ecoPoints = ecoPoints
+        self.savings = savings
+    }
+    
+    func getIcon() -> UIImage?{
+        let iconName = category.rawValue;
+        return UIImage(named:iconName)
+    }
+    
+    func getIcon(_ desaturated: Bool) -> UIImage?{
+        var iconName : String
+        if(desaturated){
+            iconName = category.rawValue
+        }
+        else{
+            iconName = category.rawValue + "_desaturated";
+        }
+       
+       return UIImage(named:iconName)
+    }
 }
 
-enum TaskCategory : Int{
-    case CIBO
-    case ACQUA
-    case ENERGIA
-    case RIFIUTI
-    case TRASPORTI
+enum TaskCategory : String{
+    case CIBO = "food"
+    case ACQUA = "water"
+    case ENERGIA = "energy"
+    case RIFIUTI = "garbage"
+    case TRASPORTI = "transport"
 }

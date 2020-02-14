@@ -9,8 +9,6 @@
 import UIKit
 
 class TaskCell: UITableViewCell {
-    
-    
 
     
     @IBOutlet var CategoryIcon: UIImageView!
@@ -19,27 +17,42 @@ class TaskCell: UITableViewCell {
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
     
+    var task : Task? {
+        willSet{
+            if let cellTask = newValue{
+               CategoryIcon.image = cellTask.getIcon()
+               EcoPointsText.text = String(cellTask.ecoPoints) + "EP"
+               SavingsText.text = String(cellTask.savings) + "$"
+               DescriptionText.text = cellTask.description
+            }
+        }
+    }
+    
+    var completed : Bool = false
+    
     @IBAction func checkPressed(_ sender: UIButton) {
-        CheckButton.isSelected.toggle()
+        toggleCheck()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
         CheckButton.setImage(UIImage(systemName: "circle"), for: .normal)
         CheckButton.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .selected)
-            
         CheckButton.isSelected = false
-        
     }
-    
+        
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: true)
         
         if(selected){
-            CheckButton.isSelected.toggle()
+            toggleCheck()
         }
     }
     
-    
+    private func toggleCheck(){
+        CheckButton.isSelected.toggle()
+        completed = !completed
+        CategoryIcon.image = task?.getIcon(!completed)
+    }
 }

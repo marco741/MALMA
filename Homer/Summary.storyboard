@@ -10,33 +10,35 @@
         <!--View Controller-->
         <scene sceneID="CF9-v8-fqf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJj-h6-POI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Summary" id="xLN-mR-Xck" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CEc-HV-fEa">
+                    <view key="view" contentMode="scaleToFill" id="s49-Nv-TgK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciao MOndo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-Ty-WPM">
-                                <rect key="frame" x="167" y="371" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wLL-BS-VcP">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="FPk-Ps-263"/>
+                        <constraints>
+                            <constraint firstItem="wLL-BS-VcP" firstAttribute="bottom" secondItem="oo4-qH-3A1" secondAttribute="bottom" id="K50-6x-eYy"/>
+                            <constraint firstItem="wLL-BS-VcP" firstAttribute="trailing" secondItem="s49-Nv-TgK" secondAttribute="trailingMargin" id="VK8-dj-YM8"/>
+                            <constraint firstItem="wLL-BS-VcP" firstAttribute="top" secondItem="oo4-qH-3A1" secondAttribute="top" id="pjc-Du-l63"/>
+                            <constraint firstItem="wLL-BS-VcP" firstAttribute="leading" secondItem="s49-Nv-TgK" secondAttribute="leadingMargin" id="sXm-pI-aYt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oo4-qH-3A1"/>
                     </view>
                     <navigationItem key="navigationItem" id="d5b-64-D7w"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qJj-h6-POI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268.1159420289855" y="-230.35714285714283"/>
+            <point key="canvasLocation" x="1266.6666666666667" y="-230.35714285714283"/>
         </scene>
         <!--Summary-->
         <scene sceneID="azv-BN-Emz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f4f-yg-3D7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Summary" id="Zcd-oX-szy"/>
+                    <tabBarItem key="tabBarItem" title="Summary" image="star" catalog="system" id="Zcd-oX-szy"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wyu-Qc-PTl">
@@ -53,4 +55,7 @@
             <point key="canvasLocation" x="357.97101449275362" y="-230.35714285714283"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

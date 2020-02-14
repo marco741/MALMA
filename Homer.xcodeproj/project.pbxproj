@@ -148,6 +148,7 @@
 		6B81B9E323F6ABC2000BFB0A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */,
 				6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */,
 			);
 			name = Categories;
@@ -182,7 +183,6 @@
 				90259D4023F5A30E00926738 /* TaskCell.swift */,
 				90259D4223F5AF8A00926738 /* TaskCollection.swift */,
 				900A0B1C23F698EC00DF8F97 /* Task.swift */,
-				90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
