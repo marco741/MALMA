@@ -16,6 +16,8 @@
 		23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23543D1223F45EB60080BDFE /* LaunchScreen.storyboard */; };
 		23543D1F23F45EB70080BDFE /* HomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543D1E23F45EB70080BDFE /* HomerTests.swift */; };
 		23543D2A23F45EB70080BDFE /* HomerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543D2923F45EB70080BDFE /* HomerUITests.swift */; };
+		33F3200E23F6B99200BAF01A /* CategoryTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */; };
+		33F3201023F6C7DA00BAF01A /* RotatedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */; };
 		6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9D723F59BBF000BFB0A /* Home.storyboard */; };
 		6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */; };
 		6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */; };
@@ -59,6 +61,8 @@
 		23543D2523F45EB70080BDFE /* HomerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23543D2923F45EB70080BDFE /* HomerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomerUITests.swift; sourceTree = "<group>"; };
 		23543D2B23F45EB70080BDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryTasks.storyboard; sourceTree = "<group>"; };
+		33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedUILabel.swift; sourceTree = "<group>"; };
 		6B81B9D723F59BBF000BFB0A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
@@ -145,9 +149,19 @@
 			path = HomerUITests;
 			sourceTree = "<group>";
 		};
+		33F3200C23F6B95400BAF01A /* CategoryTasks */ = {
+			isa = PBXGroup;
+			children = (
+				33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */,
+				33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */,
+			);
+			name = CategoryTasks;
+			sourceTree = "<group>";
+		};
 		6B81B9E323F6ABC2000BFB0A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				33F3200C23F6B95400BAF01A /* CategoryTasks */,
 				6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */,
 			);
 			name = Categories;
@@ -309,6 +323,7 @@
 			files = (
 				6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */,
 				6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */,
+				33F3200E23F6B99200BAF01A /* CategoryTasks.storyboard in Resources */,
 				23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
@@ -339,6 +354,7 @@
 			files = (
 				900A0B1D23F698EC00DF8F97 /* Task.swift in Sources */,
 				90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */,
+				33F3201023F6C7DA00BAF01A /* RotatedUILabel.swift in Sources */,
 				23543D0923F45EB60080BDFE /* ViewController.swift in Sources */,
 				23543D0F23F45EB60080BDFE /* Homer.xcdatamodeld in Sources */,
 				23543D0523F45EB60080BDFE /* AppDelegate.swift in Sources */,
