@@ -12,6 +12,7 @@ class TaskCell: UITableViewCell {
     
     
     @IBOutlet var CategoryIcon: UIImageView!
+    
     @IBOutlet var EcoPointsText: UILabel!
     @IBOutlet var SavingsText: UILabel!
     @IBOutlet var DescriptionText: UILabel!
