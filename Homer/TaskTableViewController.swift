@@ -42,8 +42,29 @@ class TaskTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath)
 
         // Configure the cell...
-        
+        let number = Int.random(in: 0...4)
+       
+        switch number{
+        case TaskCategory.CIBO.rawValue:
+            cell.imageView?.image = UIImage(named: "food")
 
+        case TaskCategory.ACQUA.rawValue:
+            cell.imageView?.image = UIImage(named: "water")
+
+        case TaskCategory.ENERGIA.rawValue:
+            cell.imageView?.image = UIImage(named: "energy")
+
+        case TaskCategory.TRASPORTI.rawValue:
+            cell.imageView?.image = UIImage(named: "transport")
+
+        case TaskCategory.RIFIUTI.rawValue:
+            cell.imageView?.image = UIImage(named: "garbage")
+        
+            
+        default:
+            break
+            
+        }
         return cell
     }
     

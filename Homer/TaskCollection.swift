@@ -28,9 +28,4 @@ class TaskCollection {
     }
 }
 
-struct Task {
-    let savings : Float
-    let description : String
-    let ecoPoints : Int
-    let category : UIImageView
-}
+

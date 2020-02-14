@@ -18,24 +18,28 @@ class TaskCell: UITableViewCell {
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
     
-    
+    /*
     @IBAction func checkPressed(_ sender: UIButton) {
         CheckButton.isSelected.toggle()
     }
-    
+    */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         CheckButton.setImage(UIImage(systemName: "circle"), for: .normal)
         CheckButton.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .selected)
-        
+            
+        CheckButton.isSelected = false
         
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        super.setSelected(selected, animated: true)
         
-        // Configure the view for the selected state
+        if(selected){
+            CheckButton.isSelected.toggle()
+        }
     }
+    
     
 }
