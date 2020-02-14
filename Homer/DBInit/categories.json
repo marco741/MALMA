@@ -1,0 +1,27 @@
+[
+    
+
+        {
+          "name": "water",
+          "image": "water"
+        },
+        {
+          "name": "energy",
+          "image": "energy"
+        },
+        {
+          "name": "garbage",
+          "image": "garbage"
+        },
+        {
+          "name": "transport",
+          "image": "transport"
+        },
+        {
+          "name": "food",
+          "image": "food"
+        }
+        
+    
+    
+]

@@ -16,6 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+       let initialized =  UserDefaults.standard.bool(forKey: "initialized")
+
+         if !initialized{
+            print("DB population")
+            Populator.populateDB()
+            
+            UserDefaults.standard.set(true, forKey: "initialized")
+        }
+        
+        let cats = PMCategory.fetchAllCategory()
+        
+        for cat in cats {
+            print("Category = \(cat.name!)")
+        }
+        
+        let tasks = PMTask.fetchAllTask()
+        
+        for task in tasks{
+            print("task's description = \(task.desc!) and task's category \(task.category?.name!)")
+        }
+        
+        
+        
         return true
     }
 

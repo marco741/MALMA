@@ -10,13 +10,13 @@ import UIKit
 import Foundation
 
 class TaskCollection {
-    private var tasks : [Task]
+    private var tasks : [TaskMock]
     
     init(){
-        tasks = [Task]()
+        tasks = [TaskMock]()
     }
     
-    func add(_ task: Task){
+    func add(_ task: TaskMock){
         tasks.append(task)
     }
     
