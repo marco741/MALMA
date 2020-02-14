@@ -34,6 +34,9 @@
 		235EF74323F6D1B2006EAD45 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF73D23F6D1B2006EAD45 /* PMUser.swift */; };
 		235EF74423F6D1B2006EAD45 /* PMCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF73E23F6D1B2006EAD45 /* PMCategory.swift */; };
 		235EF74523F6D1B2006EAD45 /* PMDoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF73F23F6D1B2006EAD45 /* PMDoneTask.swift */; };
+		333D690723F6EB9300DB24A6 /* CategoryTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D690623F6EB9300DB24A6 /* CategoryTasksCell.swift */; };
+		33F3200E23F6B99200BAF01A /* CategoryTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */; };
+		33F3201023F6C7DA00BAF01A /* RotatedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */; };
 		6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9D723F59BBF000BFB0A /* Home.storyboard */; };
 		6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */; };
 		6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */; };
@@ -95,6 +98,9 @@
 		235EF73D23F6D1B2006EAD45 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		235EF73E23F6D1B2006EAD45 /* PMCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMCategory.swift; sourceTree = "<group>"; };
 		235EF73F23F6D1B2006EAD45 /* PMDoneTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMDoneTask.swift; sourceTree = "<group>"; };
+		333D690623F6EB9300DB24A6 /* CategoryTasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTasksCell.swift; sourceTree = "<group>"; };
+		33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryTasks.storyboard; sourceTree = "<group>"; };
+		33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedUILabel.swift; sourceTree = "<group>"; };
 		6B81B9D723F59BBF000BFB0A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
@@ -213,12 +219,21 @@
 				235EF73D23F6D1B2006EAD45 /* PMUser.swift */,
 			);
 			name = PersistenceMenegers;
+		33F3200C23F6B95400BAF01A /* CategoryTasks */ = {
+			isa = PBXGroup;
+			children = (
+				33F3200F23F6C7DA00BAF01A /* RotatedUILabel.swift */,
+				33F3200D23F6B99200BAF01A /* CategoryTasks.storyboard */,
+				333D690623F6EB9300DB24A6 /* CategoryTasksCell.swift */,
+			);
+			name = CategoryTasks;
 			sourceTree = "<group>";
 		};
 		6B81B9E323F6ABC2000BFB0A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */,
+				33F3200C23F6B95400BAF01A /* CategoryTasks */,
 				6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */,
 			);
 			name = Categories;
@@ -379,6 +394,7 @@
 			files = (
 				6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */,
 				6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */,
+				33F3200E23F6B99200BAF01A /* CategoryTasks.storyboard in Resources */,
 				23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
@@ -413,6 +429,7 @@
 				235EF72D23F6D11D006EAD45 /* DoneTask+CoreDataProperties.swift in Sources */,
 				235EF74223F6D1B2006EAD45 /* PMAchievement.swift in Sources */,
 				90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */,
+				33F3201023F6C7DA00BAF01A /* RotatedUILabel.swift in Sources */,
 				23543D0923F45EB60080BDFE /* ViewController.swift in Sources */,
 				235EF74323F6D1B2006EAD45 /* PMUser.swift in Sources */,
 				235EF73123F6D11D006EAD45 /* Goal+CoreDataProperties.swift in Sources */,
@@ -431,6 +448,7 @@
 				235EF73523F6D11D006EAD45 /* Category+CoreDataProperties.swift in Sources */,
 				90259D4123F5A30E00926738 /* TaskCell.swift in Sources */,
 				235EF73723F6D11D006EAD45 /* User+CoreDataProperties.swift in Sources */,
+				333D690723F6EB9300DB24A6 /* CategoryTasksCell.swift in Sources */,
 				23543D0723F45EB60080BDFE /* SceneDelegate.swift in Sources */,
 				235EF71F23F6D06E006EAD45 /* Homer.xcdatamodeld in Sources */,
 				90048EBD23F6A3A20089600B /* CategoryCollectionViewController.swift in Sources */,

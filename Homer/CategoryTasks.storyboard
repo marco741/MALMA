@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Category Tasks-->
+        <scene sceneID="EHD-rs-5le">
+            <objects>
+                <tableViewController id="lNJ-jB-nZs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="W9a-3p-JAk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="HGj-6e-WeM" customClass="CategoryTasksCell" customModule="Homer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HGj-6e-WeM" id="bOV-fc-0Rh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiudi i denti mentre ti lavi l’acqua descrizione descrizione descrizione  descrizione descrizione" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gi2-5v-RuS" userLabel="Description text">
+                                            <rect key="frame" x="67" y="31" width="280" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="Gtv-Jh-3yG"/>
+                                                <constraint firstAttribute="width" constant="280" id="pnv-Pa-OCH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qc-vl-7ss" userLabel="Savings text">
+                                            <rect key="frame" x="20" y="121" width="40" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" red="0.047058823530000002" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-a6-myn" userLabel="Eco points text">
+                                            <rect key="frame" x="352" y="121" width="42" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" name="yellow"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkI-Gx-OAh">
+                                            <rect key="frame" x="184.5" y="104" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="LrG-0Y-cKp"/>
+                                                <constraint firstAttribute="height" constant="45" id="Uvh-bo-9im"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <color key="tintColor" red="0.070588235294117646" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Button" image="circle" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="45"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="              Weekly          " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-xJ-Gna" userLabel="Weekly text" customClass="RotatedUILabel" customModule="Homer" customModuleProvider="target">
+                                            <rect key="frame" x="315" y="11" width="138" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.87843137250000003" green="0.74901960779999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="label_Rotation">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="9Qc-vl-7ss" secondAttribute="bottom" constant="20" id="2I4-FV-K88"/>
+                                        <constraint firstAttribute="trailing" secondItem="YHh-a6-myn" secondAttribute="trailing" constant="20" id="6z4-kT-RHp"/>
+                                        <constraint firstItem="9Qc-vl-7ss" firstAttribute="leading" secondItem="bOV-fc-0Rh" secondAttribute="leading" constant="20" id="B7R-SR-e7o"/>
+                                        <constraint firstAttribute="bottom" secondItem="YHh-a6-myn" secondAttribute="bottom" constant="20" id="Dbf-Pw-dcx"/>
+                                        <constraint firstItem="xkI-Gx-OAh" firstAttribute="top" secondItem="Gi2-5v-RuS" secondAttribute="bottom" constant="13" id="DwX-yt-o9t"/>
+                                        <constraint firstItem="Gi2-5v-RuS" firstAttribute="centerX" secondItem="bOV-fc-0Rh" secondAttribute="centerX" id="IS7-NV-AfY"/>
+                                        <constraint firstItem="xkI-Gx-OAh" firstAttribute="centerX" secondItem="bOV-fc-0Rh" secondAttribute="centerX" id="Zew-Yq-Vz8"/>
+                                        <constraint firstItem="Gi2-5v-RuS" firstAttribute="top" secondItem="bOV-fc-0Rh" secondAttribute="topMargin" constant="20" id="ilj-SH-3hr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkbox" destination="xkI-Gx-OAh" id="H7k-m6-O7d"/>
+                                    <outlet property="descriptionLabel" destination="Gi2-5v-RuS" id="tBn-IZ-WOA"/>
+                                    <outlet property="ecoPointsLabel" destination="YHh-a6-myn" id="iGW-gp-uQJ"/>
+                                    <outlet property="savingsLabel" destination="9Qc-vl-7ss" id="qNO-Cx-L3P"/>
+                                    <outlet property="weeklyLabel" destination="Jeg-xJ-Gna" id="x53-m0-2JE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lNJ-jB-nZs" id="T5c-Ef-2zu"/>
+                            <outlet property="delegate" destination="lNJ-jB-nZs" id="m6T-Xg-Gpb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Category Tasks" id="th9-nX-rfF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoF-vP-9qk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="28.794642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Zl-Ee-8lk">
+            <objects>
+                <navigationController id="mJz-rA-Jve" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OSy-AO-P7i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lNJ-jB-nZs" kind="relationship" relationship="rootViewController" id="UL0-Gn-ukD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3x-u4-lIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" catalog="system" width="64" height="60"/>
+        <namedColor name="yellow">
+            <color red="0.87800002098083496" green="0.74900001287460327" blue="0.063000001013278961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
