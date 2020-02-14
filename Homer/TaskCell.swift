@@ -17,7 +17,7 @@ class TaskCell: UITableViewCell {
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
     
-    var task : Task? {
+    var task : TaskMock? {
         willSet{
             if let cellTask = newValue{
                CategoryIcon.image = cellTask.getIcon()

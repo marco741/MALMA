@@ -40,7 +40,7 @@ class TaskTableViewController: UITableViewController {
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath) as! TaskCell
-
+        
         /*
         let number = Int.random(in: 0...4)
         let cellImageView = cell.CategoryIcon
@@ -67,7 +67,7 @@ class TaskTableViewController: UITableViewController {
         }
  */
         
-        cell.task = Task(.ENERGIA, "Chiur a luc", 30, 0.05)
+        cell.task = TaskMock(.ENERGIA, "Chiur a luc", 30, 0.05)
         
         
         return cell

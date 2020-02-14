@@ -16,16 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wLL-BS-VcP">
-                                <rect key="frame" x="20" y="88" width="374" height="725"/>
-                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CV3-PP-aDY">
+                                <rect key="frame" x="15" y="103" width="384" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Last Month"/>
+                                    <segment title="Today"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0O-66-h2d">
+                                <rect key="frame" x="0.0" y="154" width="414" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aft-sG-jbP">
+                                        <rect key="frame" x="15" y="15" width="384" height="220"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-vA-sCW">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="220"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jz0-KX-eoO">
+                                                <rect key="frame" x="192" y="0.0" width="192" height="220"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aft-sG-jbP" firstAttribute="leading" secondItem="z0O-66-h2d" secondAttribute="leading" constant="15" id="7cN-UP-H0y"/>
+                                    <constraint firstItem="aft-sG-jbP" firstAttribute="top" secondItem="z0O-66-h2d" secondAttribute="top" constant="15" id="9YC-Oo-WzJ"/>
+                                    <constraint firstAttribute="width" constant="414" id="FrC-SJ-QwD"/>
+                                    <constraint firstAttribute="bottom" secondItem="aft-sG-jbP" secondAttribute="bottom" constant="15" id="XDn-We-2Re"/>
+                                    <constraint firstAttribute="height" constant="250" id="bji-SF-5KZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aft-sG-jbP" secondAttribute="trailing" constant="15" id="zcb-TX-62V"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wLL-BS-VcP" firstAttribute="bottom" secondItem="oo4-qH-3A1" secondAttribute="bottom" id="K50-6x-eYy"/>
-                            <constraint firstItem="wLL-BS-VcP" firstAttribute="trailing" secondItem="s49-Nv-TgK" secondAttribute="trailingMargin" id="VK8-dj-YM8"/>
-                            <constraint firstItem="wLL-BS-VcP" firstAttribute="top" secondItem="oo4-qH-3A1" secondAttribute="top" id="pjc-Du-l63"/>
-                            <constraint firstItem="wLL-BS-VcP" firstAttribute="leading" secondItem="s49-Nv-TgK" secondAttribute="leadingMargin" id="sXm-pI-aYt"/>
+                            <constraint firstItem="oo4-qH-3A1" firstAttribute="trailing" secondItem="CV3-PP-aDY" secondAttribute="trailing" constant="15" id="GQ5-YN-Vjt"/>
+                            <constraint firstItem="CV3-PP-aDY" firstAttribute="leading" secondItem="oo4-qH-3A1" secondAttribute="leading" constant="15" id="Mzg-0V-JKA"/>
+                            <constraint firstItem="CV3-PP-aDY" firstAttribute="top" secondItem="oo4-qH-3A1" secondAttribute="top" constant="15" id="bUx-lD-dAe"/>
+                            <constraint firstItem="z0O-66-h2d" firstAttribute="top" secondItem="CV3-PP-aDY" secondAttribute="bottom" constant="20" id="iev-Yb-LlZ"/>
+                            <constraint firstItem="z0O-66-h2d" firstAttribute="leading" secondItem="oo4-qH-3A1" secondAttribute="leading" id="nEZ-io-3JT"/>
+                            <constraint firstItem="z0O-66-h2d" firstAttribute="trailing" secondItem="oo4-qH-3A1" secondAttribute="trailing" id="qeR-DC-TTS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oo4-qH-3A1"/>
                     </view>
