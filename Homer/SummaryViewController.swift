@@ -9,7 +9,9 @@
 import UIKit
 
 class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+    @IBOutlet var piggyBank: UIImageView!
     
+    @IBOutlet var earth: UIImageView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -30,6 +32,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         super.viewDidLoad()
         achievementCollection.delegate = self
         achievementCollection.dataSource = self
+        
     }
     
     
