@@ -20,6 +20,7 @@
 		6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */; };
 		6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */; };
 		6B81B9EA23F6B68C000BFB0A /* CategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81B9E923F6B68C000BFB0A /* CategoriesDataSource.swift */; };
+		6B81B9F023F6E00D000BFB0A /* CategoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81B9EF23F6E00D000BFB0A /* CategoryContentView.swift */; };
 		90048EBD23F6A3A20089600B /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */; };
 		900A0B1D23F698EC00DF8F97 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900A0B1C23F698EC00DF8F97 /* Task.swift */; };
 		90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D3E23F5A2C000926738 /* TaskTableViewController.swift */; };
@@ -64,6 +65,7 @@
 		6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
 		6B81B9E923F6B68C000BFB0A /* CategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSource.swift; sourceTree = "<group>"; };
+		6B81B9EF23F6E00D000BFB0A /* CategoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContentView.swift; sourceTree = "<group>"; };
 		90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		900A0B1C23F698EC00DF8F97 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		90259D3E23F5A2C000926738 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */,
 				6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */,
 				6B81B9E923F6B68C000BFB0A /* CategoriesDataSource.swift */,
+				6B81B9EF23F6E00D000BFB0A /* CategoryContentView.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */,
 				23543D0923F45EB60080BDFE /* ViewController.swift in Sources */,
 				23543D0F23F45EB60080BDFE /* Homer.xcdatamodeld in Sources */,
+				6B81B9F023F6E00D000BFB0A /* CategoryContentView.swift in Sources */,
 				6B81B9EA23F6B68C000BFB0A /* CategoriesDataSource.swift in Sources */,
 				23543D0523F45EB60080BDFE /* AppDelegate.swift in Sources */,
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,

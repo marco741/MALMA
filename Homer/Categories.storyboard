@@ -27,7 +27,7 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="sQ2-K8-edv">
                                 <rect key="frame" x="12" y="10" width="171" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="msn-lc-KgX">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="msn-lc-KgX" customClass="CategoryContentView" customModule="Homer" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -51,6 +51,17 @@
                                         <constraint firstItem="7iw-pH-1yO" firstAttribute="centerX" secondItem="msn-lc-KgX" secondAttribute="centerX" id="p61-yR-JcT"/>
                                         <constraint firstItem="7iw-pH-1yO" firstAttribute="centerY" secondItem="msn-lc-KgX" secondAttribute="centerY" id="qhD-wY-nAO"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="grey"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
@@ -99,6 +110,9 @@
         <image name="energy" width="512" height="512"/>
         <namedColor name="dark-green">
             <color red="0.046999998390674591" green="0.37999999523162842" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey">
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
