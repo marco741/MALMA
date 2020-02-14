@@ -39,26 +39,28 @@ class TaskTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath) as! TaskCell
 
         // Configure the cell...
         let number = Int.random(in: 0...4)
-       
+        let cellImageView = cell.CategoryIcon
+        
         switch number{
         case TaskCategory.CIBO.rawValue:
-            cell.imageView?.image = UIImage(named: "food")
+            cellImageView?.image = UIImage(named: "food")
 
         case TaskCategory.ACQUA.rawValue:
-            cell.imageView?.image = UIImage(named: "water")
+            cellImageView?.image = UIImage(named: "water")
 
         case TaskCategory.ENERGIA.rawValue:
-            cell.imageView?.image = UIImage(named: "energy")
+            cellImageView?.image = UIImage(named: "energy")
 
         case TaskCategory.TRASPORTI.rawValue:
-            cell.imageView?.image = UIImage(named: "transport")
+            cellImageView?.image = UIImage(named: "transport")
 
         case TaskCategory.RIFIUTI.rawValue:
-            cell.imageView?.image = UIImage(named: "garbage")
+            cellImageView?.image = UIImage(named: "garbage")
+
         
             
         default:

@@ -17,6 +17,7 @@
 		23543D1F23F45EB70080BDFE /* HomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543D1E23F45EB70080BDFE /* HomerTests.swift */; };
 		23543D2A23F45EB70080BDFE /* HomerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23543D2923F45EB70080BDFE /* HomerUITests.swift */; };
 		6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9D723F59BBF000BFB0A /* Home.storyboard */; };
+		90048EBD23F6A3A20089600B /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */; };
 		900A0B1D23F698EC00DF8F97 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900A0B1C23F698EC00DF8F97 /* Task.swift */; };
 		90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D3E23F5A2C000926738 /* TaskTableViewController.swift */; };
 		90259D4123F5A30E00926738 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4023F5A30E00926738 /* TaskCell.swift */; };
@@ -57,6 +58,7 @@
 		23543D2923F45EB70080BDFE /* HomerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomerUITests.swift; sourceTree = "<group>"; };
 		23543D2B23F45EB70080BDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B81B9D723F59BBF000BFB0A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		900A0B1C23F698EC00DF8F97 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		90259D3E23F5A2C000926738 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		90259D4023F5A30E00926738 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
@@ -139,6 +141,27 @@
 			path = HomerUITests;
 			sourceTree = "<group>";
 		};
+		90048EBE23F6A3A80089600B /* TaskSection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TaskSection;
+			sourceTree = "<group>";
+		};
+		90048EBF23F6A3B80089600B /* CategorySection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CategorySection;
+			sourceTree = "<group>";
+		};
+		90048EC023F6A3C40089600B /* RewardSection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RewardSection;
+			sourceTree = "<group>";
+		};
 		9AF8D8B223F594A30030FCF1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,12 +175,16 @@
 		9AF8D8B323F595150030FCF1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				90048EC023F6A3C40089600B /* RewardSection */,
+				90048EBF23F6A3B80089600B /* CategorySection */,
+				90048EBE23F6A3A80089600B /* TaskSection */,
 				23543D0823F45EB60080BDFE /* ViewController.swift */,
 				6B81B9D723F59BBF000BFB0A /* Home.storyboard */,
 				90259D3E23F5A2C000926738 /* TaskTableViewController.swift */,
 				90259D4023F5A30E00926738 /* TaskCell.swift */,
 				90259D4223F5AF8A00926738 /* TaskCollection.swift */,
 				900A0B1C23F698EC00DF8F97 /* Task.swift */,
+				90048EBC23F6A3A20089600B /* CategoryCollectionViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -318,6 +345,7 @@
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,
 				90259D4123F5A30E00926738 /* TaskCell.swift in Sources */,
 				23543D0723F45EB60080BDFE /* SceneDelegate.swift in Sources */,
+				90048EBD23F6A3A20089600B /* CategoryCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
