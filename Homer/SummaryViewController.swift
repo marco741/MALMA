@@ -9,7 +9,9 @@
 import UIKit
 import SceneKit
 
-class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    private let spacing: CGFloat = 12.0
     
     @IBOutlet var piggyBank: UIImageView!
     @IBOutlet var earth: UIImageView!
@@ -122,4 +124,17 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
     }
     */
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfItemsPerRow: CGFloat = 4
+        let spacingBetweenCells: CGFloat = 9
+
+        let totalSpacing = (2 * spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) + 2 * numberOfItemsPerRow
+
+        if let collection = achievementCollection {
+            let width = (collection.bounds.width - totalSpacing) / numberOfItemsPerRow
+            return CGSize(width: width, height: width)
+        } else {
+            return CGSize(width: 0, height: 0)
+        }
+    }
 }
