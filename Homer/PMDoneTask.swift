@@ -159,7 +159,7 @@ class PMDoneTask{
                               let startDate = dateFormatter.date(from: "\(year)/\(month)/\(day) 00:00")
                              
                              let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
-                      fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ AND task = %@", startDate! as NSDate,todayDate as NSDate)
+                      fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ ", startDate! as NSDate,todayDate as NSDate)
                              
                              do{
                                  
@@ -195,7 +195,7 @@ class PMDoneTask{
                        let startDate = dateFormatter.date(from: "\(year)/\(month)/01 00:00")
                       
                       let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
-               fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ AND task = %@", startDate! as NSDate,todayDate as NSDate)
+               fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ ", startDate! as NSDate,todayDate as NSDate)
                       
                       do{
                           

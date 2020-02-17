@@ -44,5 +44,29 @@ extension User {
           
           return ecoPoints
       }
+    
+    func getSavingsOfDay() -> Float{
+        let tasks = PMDoneTask.fetchDoneTaskOfDay()
+        
+        var savings:Float = 0.0
+        
+        for doneTask in tasks{
+            savings += doneTask.task?.savings ?? 0.0
+        }
+        
+        return savings
+    }
+    
+    func getSavingsOfMonth() -> Float{
+        let tasks = PMDoneTask.fetchDoneTaskOfMonth()
+        
+        var savings:Float = 0.0
+        
+        for doneTask in tasks{
+            savings += doneTask.task?.savings ?? 0.0
+        }
+        
+        return savings
+    }
 
 }
