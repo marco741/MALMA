@@ -1,28 +1,27 @@
-
 [
-    
-
-        {
-          "name": "ac1",
-          "image": "energy",
-          "desc": "bel premio"
-        },
-        {
-          "name": "ac2",
-          "image": "food",
-          "desc": "bel premio"
-        },
-        {
-          "name": "ac3",
-          "image": "garbage",
-          "desc": "bel premio"
-        },
-        {
-          "name": "ac4",
-          "image": "water",
-          "desc": "bel premio"
-        }
-        
-    
-    
+    {
+        "name": "Idraulico",
+        "image": "water",
+        "desc": "Completa 4 task della categoria water"
+    },
+    {
+        "name": "Elettricista",
+        "image": "energy",
+        "desc": "Completa 4 task della categoria energy"
+    },
+    {
+        "name": "Spazzino",
+        "image": "garbage",
+        "desc": "Completa 4 task della categoria garbage"
+    },
+    {
+        "name": "Viaggiatore",
+        "image": "transport",
+        "desc": "Completa 4 task della categoria transport"
+    },
+    {
+        "name": "Chef",
+        "image": "food",
+        "desc": "Completa 4 task della categoria food"
+    }
 ]

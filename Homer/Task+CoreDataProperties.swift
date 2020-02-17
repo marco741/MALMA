@@ -115,6 +115,22 @@ extension Task {
         
         
     }
+    
+    func checkForPriority(){
+        if(priority>0){
+            
+            let doneTasks = PMDoneTask.fetchDoneTaskOfPreviousDay(task: self)
+            
+            if doneTasks.count <= 0 {
+                
+                self.priority = 0
+                PMTask.saveContext()
+                
+            }
+            
+            
+        }
+    }
 
 }
 

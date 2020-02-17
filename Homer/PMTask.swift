@@ -65,6 +65,36 @@ class PMTask{
         
     }
     
+    static func fetchUnselectedTask() -> [Task]{
+        var tasks: [Task] = []
+        
+        let context = getContext()
+        
+        let fetchRequest = NSFetchRequest<Task>(entityName: tableName)
+       fetchRequest.predicate = NSPredicate(format: "state = 'enabled'")
+        
+        do{
+            
+            try tasks = context.fetch(fetchRequest)
+            
+        } catch let error as NSError{
+            
+            print("Errore in fetch \(error.code)")
+            
+        }
+        
+        var tasks2:[Task] = []
+        
+        for task in tasks{
+            if(!task.isChecked()){
+                tasks2.append(task)
+            }
+        }
+        
+        return tasks2
+        
+    }
+    
     static func fetchById(id: Int32) -> [Task]{
         var task: [Task] = []
         

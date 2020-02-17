@@ -65,16 +65,15 @@ class Populator{
         
         for goal in goals{
             
-            let taskId = Int32(goal["task"] as! String)
+            let category = goal["category"] as! String
             let achievementName = goal["achievement"] as! String
             
             let achievement = PMAchievement.fetchByName(name: achievementName)
-            let task = PMTask.fetchById(id: taskId!)
             
             let goalNum = Int32(goal["goal"] as! String)
             let below = Bool(goal["below"] as! String)
             
-            _ = PMGoal.newGoal(task: task[0], achivement: achievement[0], goalNum: goalNum!, below: below!)
+            _ = PMGoal.newGoal(category: category, achivement: achievement[0], goalNum: goalNum!, below: below!)
             
             
         }
