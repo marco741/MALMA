@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="31V-5y-Mw3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -81,6 +81,13 @@
                                                 <constraint firstItem="Jkv-Pb-5Gt" firstAttribute="top" secondItem="6Wg-yp-bh4" secondAttribute="bottom" constant="5" id="ysM-ch-Zp8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkBox" destination="Jkv-Pb-5Gt" id="AYr-7r-yQG"/>
+                                            <outlet property="descriptionLabel" destination="6Wg-yp-bh4" id="kNU-vT-kux"/>
+                                            <outlet property="ecoPointsLabel" destination="fXy-WE-bCP" id="ITL-RO-lhB"/>
+                                            <outlet property="savingsLabel" destination="tPz-p2-fQZ" id="vN2-ND-XAt"/>
+                                            <outlet property="weeklyLabel" destination="zPD-wx-lKM" id="b7i-e6-xGN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -91,6 +98,9 @@
                                     <segment title="All"/>
                                     <segment title="Disabled"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="iVR-fT-pwc" eventType="valueChanged" id="QGa-C8-KRO"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

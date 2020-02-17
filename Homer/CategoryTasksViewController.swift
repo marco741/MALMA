@@ -25,6 +25,19 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+            case 0:
+                print("Selected 'All'")
+            case 1:
+                print("Selected 'Disabled'")
+            default:
+                print("Unexpected behaviour")
+            }
+            
+        }
+    
+    
     
     
     override func viewDidLoad() {
@@ -36,6 +49,10 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
 
         // Do any additional setup after loading the view.
     }
+    
+//    ovveride func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
     /*
     // MARK: - Navigation
