@@ -11,4 +11,6 @@ import UIKit
 class AchievementCell: UICollectionViewCell {
     
     @IBOutlet var cellImage: UIImageView!
+    
+    
 }

@@ -54,7 +54,6 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         switch sender.selectedSegmentIndex{
         case 0:
             print("first segment")
-            
         case 1:
             print("second segment")
         case 2:
@@ -65,14 +64,19 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "achievementDetail"{
+            let detail = segue.destination as! AchievementDetailViewController
+            let index = achievementCollection.indexPathsForSelectedItems?[0].row
+            
+            if let selectedIndex = index {
+                detail.achievement = achievements[selectedIndex]
+            }
+        }
     }
-    */
-
 }
