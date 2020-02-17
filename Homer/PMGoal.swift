@@ -23,13 +23,14 @@ class PMGoal{
         
     }
     
-    static func newGoal(task: Task, achivement: Achievement, goalNum: Int) -> Goal{
+    static func newGoal(task: Task, achivement: Achievement, goalNum: Int32, below: Bool) -> Goal{
         let context = getContext()
         
         let goal = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Goal
         
-        goal.goal =  Int32(goalNum)
+        goal.goal =  goalNum
         goal.task = task
+        goal.below = below
         goal.achivement = achivement
         
         

@@ -23,13 +23,14 @@ class PMAchievement{
         
     }
     
-    static func newAchievement(imageName: String, name: String) -> Achievement{
+    static func newAchievement(imageName: String, name: String, desc: String) -> Achievement{
         let context = getContext()
         
         let achievement = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Achievement
         
         achievement.image = imageName
         achievement.name = name
+        achievement.desc = desc
         achievement.unlocked = false
         achievement.goals = NSSet()
         
@@ -57,6 +58,30 @@ class PMAchievement{
         return achievements
         
     }
+    
+    static func fetchByName(name: String) -> [Achievement]{
+           var achievements: [Achievement] = []
+           
+           let context = getContext()
+           
+           let fetchRequest = NSFetchRequest<Achievement>(entityName: tableName)
+           fetchRequest.predicate = NSPredicate(format: "name = %@", name)
+           
+           do{
+               
+               try achievements = context.fetch(fetchRequest)
+               
+           } catch let error as NSError{
+               
+               print("Errore in fetch \(error.code)")
+               
+           }
+           
+           return achievements
+           
+       }
+    
+    
     
     static func saveContext() {
         let context = getContext()

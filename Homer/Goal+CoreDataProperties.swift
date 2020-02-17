@@ -2,7 +2,7 @@
 //  Goal+CoreDataProperties.swift
 //  Homer
 //
-//  Created by Lorenzo Fasolino on 14/02/2020.
+//  Created by Lorenzo Fasolino on 16/02/2020.
 //  Copyright © 2020 Lorenzo Fasolino. All rights reserved.
 //
 //
@@ -18,6 +18,7 @@ extension Goal {
     }
 
     @NSManaged public var goal: Int32
+    @NSManaged public var below: Bool
     @NSManaged public var achivement: Achievement?
     @NSManaged public var task: Task?
 

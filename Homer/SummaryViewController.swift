@@ -13,13 +13,17 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
     
     @IBOutlet var earth: UIImageView!
     
+    var achievements:[Achievement] = []
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return achievements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
+        
+        cell.cellImage.image = UIImage(named: achievements[indexPath.row].image!)
         
         return cell
     }
@@ -35,6 +39,8 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         super.viewDidLoad()
         achievementCollection.delegate = self
         achievementCollection.dataSource = self
+        
+        achievements = PMAchievement.fetchAllAchievement()
         
     }
     

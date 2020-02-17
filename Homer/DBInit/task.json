@@ -1,6 +1,7 @@
 [
         {
            
+            "id":"1",
             "desc":"bello bello bello bello belo bello bello bello ",
             "ecoPoints":"30",
             "savings":"20",
@@ -9,27 +10,30 @@
         },
         {
             
+            "id":"2",
             "desc":"bello bello bello bello belo bello bello bello ",
             "ecoPoints":"40",
             "savings":"20",
             "weekly":"false",
-            "category":"water"
+            "category":"food"
         },
         {
             
+            "id":"3",
             "desc":"bello bello bello bello belo bello bello bello ",
             "ecoPoints":"50",
             "savings":"20",
             "weekly":"false",
-            "category":"water"
+            "category":"energy"
         },
         {
             
+            "id":"4",
             "desc":"bello bello bello bello belo bello bello bello ",
             "ecoPoints":"60",
             "savings":"20",
             "weekly":"false",
-            "category":"water"
+            "category":"garbage"
         }
     
 ]

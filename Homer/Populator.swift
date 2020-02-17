@@ -28,20 +28,54 @@ class Populator{
         
         for task in tasks{
             
-           // print("category = \(task["category"] as! String)")
+            print("category = \(task["category"] as! String)")
             
             let category = PMCategory.fetchByName(name: task["category"] as! String)
             
+                let id = Int32(task["id"] as! String)
+                let desc = task["desc"] as! String
+                let ecoP = Int32(task["ecoPoints"] as! String)
+                let savings = Float(task["savings"] as! String)
+                let weekly = Bool(task["weekly"] as! String)
+                
+                
+                let t =  PMTask.newTask(id: id!,desc: desc, ecoPoint: ecoP!, savings: savings!, state: "enabled", weekly: weekly!, categoty: category[0])
+                
+                category[0].addTask(task: t)
+        
             
-            let desc = task["desc"] as! String
-            let ecoP = Int32(task["ecoPoints"] as! String)
-            let savings = Float(task["savings"] as! String)
-            let weekly = Bool(task["weekly"] as! String)
+            
+        }
+        
+        let achievements = jsonRead(fileName: "achievement")
+        
+        for achievement in achievements{
+            
+            let image = achievement["image"] as! String
+            let name = achievement["name"] as! String
+            let desc = achievement["desc"] as! String
+            
+            _ = PMAchievement.newAchievement(imageName: image, name: name, desc: desc)
             
             
-          let task =  PMTask.newTask(desc: desc, ecoPoint: ecoP!, savings: savings!, state: "active", weekly: weekly!, categoty: category[0])
             
-          category[0].addTask(task: task)
+        }
+        
+        let goals = jsonRead(fileName: "goal")
+        
+        for goal in goals{
+            
+            let taskId = Int32(goal["task"] as! String)
+            let achievementName = goal["achievement"] as! String
+            
+            let achievement = PMAchievement.fetchByName(name: achievementName)
+            let task = PMTask.fetchById(id: taskId!)
+            
+            let goalNum = Int32(goal["goal"] as! String)
+            let below = Bool(goal["below"] as! String)
+            
+            _ = PMGoal.newGoal(task: task[0], achivement: achievement[0], goalNum: goalNum!, below: below!)
+            
             
         }
         

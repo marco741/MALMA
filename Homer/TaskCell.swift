@@ -17,13 +17,24 @@ class TaskCell: UITableViewCell {
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
     
-    var task : TaskMock? {
+    var checked = false
+    
+    var task : Task? {
         willSet{
             if let cellTask = newValue{
-               CategoryIcon.image = cellTask.getIcon()
-               EcoPointsText.text = String(cellTask.ecoPoints) + "EP"
-               SavingsText.text = String(cellTask.savings) + "$"
-               DescriptionText.text = cellTask.description
+                if(cellTask.isChecked()){
+                    CategoryIcon.image = cellTask.getIcon(true)
+                    CheckButton.isSelected = true
+                    checked = true
+                }else{
+                    CategoryIcon.image = cellTask.getIcon(false)
+                    CheckButton.isSelected = false
+                    checked = false
+                }
+                
+                EcoPointsText.text = String(cellTask.ecoPoints) + "EP"
+                SavingsText.text = String(cellTask.savings) + "$"
+                DescriptionText.text = cellTask.desc
             }
         }
     }
@@ -51,8 +62,15 @@ class TaskCell: UITableViewCell {
     }
     
     private func toggleCheck(){
+        if(checked){
+            task?.unCheck()
+            checked = false
+        }else{
+            task?.check()
+            checked = true
+        }
         CheckButton.isSelected.toggle()
         completed = !completed
-        CategoryIcon.image = task?.getIcon(!completed)
+        CategoryIcon.image = task?.getIcon(checked)
     }
 }

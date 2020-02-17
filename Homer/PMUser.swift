@@ -55,6 +55,28 @@ class PMUser{
         
     }
     
+    static func fetchUser() -> User{
+        var users: [User] = []
+        
+        let context = getContext()
+        
+        let fetchRequest = NSFetchRequest<User>(entityName: tableName)
+        
+        do{
+            
+            try users = context.fetch(fetchRequest)
+            
+        } catch let error as NSError{
+            
+            print("Errore in fetch \(error.code)")
+            
+        }
+        
+        return users[0]
+        
+    }
+    
+    
     static func saveContext() {
         let context = getContext()
         

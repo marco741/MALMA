@@ -54,6 +54,84 @@ class PMDoneTask{
         
     }
     
+    static func fetchByTodayAndTask(task: Task) -> [DoneTask]{
+        
+        var doneTasks: [DoneTask] = []
+               
+               let context = getContext()
+        
+                let todayDate = Date()
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd"
+                let day = dateFormatter.string(from: todayDate)
+                dateFormatter.dateFormat = "yyyy"
+                let year = dateFormatter.string(from: todayDate)
+                dateFormatter.dateFormat = "MM"
+                let month = dateFormatter.string(from: todayDate)
+        
+                dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+                let startDate = dateFormatter.date(from: "\(year)/\(month)/\(day) 00:00")
+               
+               let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
+        fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ AND task = %@", startDate! as NSDate,todayDate as NSDate,task)
+               
+               do{
+                   
+                   try doneTasks = context.fetch(fetchRequest)
+                   
+               } catch let error as NSError{
+                   
+                   print("Errore in fetch \(error.code)")
+                   
+               }
+               
+               return doneTasks
+        
+        
+    }
+    
+    static func fetchWeeklyTask(task: Task) -> [DoneTask]{
+           
+           var doneTasks: [DoneTask] = []
+                  
+                  let context = getContext()
+           
+                   let todayDate = Date()
+        
+            var weekday = Calendar.current.component(.weekday, from: todayDate)
+            weekday -= 1
+            if(weekday == 0 ){
+                weekday = 7
+            }
+        
+        
+            var endDate = Calendar.current.date(byAdding: .day, value: 7-weekday, to: Date())
+            endDate =  Calendar.current.date(bySettingHour: 23, minute: 59, second: 59, of: endDate!)
+        
+        
+            var startDate = Calendar.current.date(byAdding: .day, value: weekday-1, to: Date())
+             startDate =  Calendar.current.date(bySettingHour: 00, minute: 00, second: 01, of: startDate!)
+        
+        
+                  let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
+           fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate <= %@ AND task = %@", startDate! as NSDate,endDate! as NSDate,task)
+                  
+                  do{
+                      
+                      try doneTasks = context.fetch(fetchRequest)
+                      
+                  } catch let error as NSError{
+                      
+                      print("Errore in fetch \(error.code)")
+                      
+                  }
+                  
+                  return doneTasks
+           
+           
+       }
+    
    /* static func fetchAllDoneTaskOfDay() -> [DoneTask]{
         var doneTasks: [DoneTask] = []
         
@@ -90,7 +168,7 @@ class PMDoneTask{
     }
     
     
-    static func deleteUser(doneTask: DoneTask){
+    static func deleteDoneTask(doneTask: DoneTask){
         let context = getContext()
         context.delete(doneTask)
         

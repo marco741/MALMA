@@ -10,11 +10,13 @@ import UIKit
 
 class TaskTableViewController: UITableViewController {
     
-    
+    var tasks:[Task] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tasks = PMTask.fetchAllTask()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,7 +34,7 @@ class TaskTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return tasks.count
     }
 
     
@@ -41,7 +43,7 @@ class TaskTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath) as! TaskCell
 
-        cell.task = TaskMock(.ENERGIA, "Chiur a luc", 30, 0.05)
+        cell.task = tasks[indexPath.row]
         
         
         return cell
