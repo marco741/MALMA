@@ -18,7 +18,7 @@ class AchievementDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            /*
+        /*
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(0, 10, 10)
@@ -38,13 +38,15 @@ class AchievementDetailViewController: UIViewController {
         */
         
         let scene = SCNScene(named:"cube.scn")
+        
         detailSceneView.allowsCameraControl = true
         detailSceneView.showsStatistics = false
         detailSceneView.cameraControlConfiguration.allowsTranslation = false
         detailSceneView.scene = scene
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

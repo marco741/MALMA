@@ -175,6 +175,7 @@
 		23543D0323F45EB60080BDFE /* Homer */ = {
 			isa = PBXGroup;
 			children = (
+				9099D75A23FAA0110063C588 /* AchievementModels */,
 				235EF74823F6DADF006EAD45 /* DBInit */,
 				235EF73923F6D19B006EAD45 /* PersistenceMenegers */,
 				235EF73823F6D122006EAD45 /* DAO */,
@@ -271,6 +272,13 @@
 				90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */,
 			);
 			name = Summary;
+			sourceTree = "<group>";
+		};
+		9099D75A23FAA0110063C588 /* AchievementModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AchievementModels;
 			sourceTree = "<group>";
 		};
 		9AF8D8B223F594A30030FCF1 /* Storyboards */ = {
@@ -475,8 +483,6 @@
 				235EF72F23F6D11D006EAD45 /* Achievement+CoreDataProperties.swift in Sources */,
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,
 				235EF74723F6D72C006EAD45 /* Populator.swift in Sources */,
-				235EF73323F6D11D006EAD45 /* Task+CoreDataProperties.swift in Sources */,
-				235EF73223F6D11D006EAD45 /* Task+CoreDataClass.swift in Sources */,
 				90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */,
 				235EF72E23F6D11D006EAD45 /* Achievement+CoreDataClass.swift in Sources */,
 				235EF74423F6D1B2006EAD45 /* PMCategory.swift in Sources */,
