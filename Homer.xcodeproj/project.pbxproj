@@ -50,7 +50,6 @@
 		90259D4123F5A30E00926738 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4023F5A30E00926738 /* TaskCell.swift */; };
 		90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4223F5AF8A00926738 /* TaskCollection.swift */; };
 		90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */; };
-		90AB077623F85C9600D930D5 /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = 90AB077523F85C9600D930D5 /* cube.obj */; };
 		90AB077823F85D1B00D930D5 /* cube.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90AB077723F85D1B00D930D5 /* cube.scn */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +120,6 @@
 		90259D4023F5A30E00926738 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		90259D4223F5AF8A00926738 /* TaskCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollection.swift; sourceTree = "<group>"; };
 		90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
-		90AB077523F85C9600D930D5 /* cube.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
 		90AB077723F85D1B00D930D5 /* cube.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cube.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,7 +258,6 @@
 		6B81B9E623F6ABDB000BFB0A /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				90AB077523F85C9600D930D5 /* cube.obj */,
 				90AB077723F85D1B00D930D5 /* cube.scn */,
 				6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */,
 				90048EC523F6F26F0089600B /* SummaryViewController.swift */,
@@ -422,7 +419,6 @@
 				235EF74C23F6DD7D006EAD45 /* task.json in Resources */,
 				90AB077823F85D1B00D930D5 /* cube.scn in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
-				90AB077623F85C9600D930D5 /* cube.obj in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
 				6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */,
 			);

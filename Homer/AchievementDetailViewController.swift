@@ -16,8 +16,6 @@ class AchievementDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let scene = SCNScene(named:"cube.scn")
             /*
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -36,25 +34,23 @@ class AchievementDetailViewController: UIViewController {
         ambientLightNode.light?.color = UIColor.darkGray
         scene?.rootNode.addChildNode(ambientLightNode)
         */
+        
+        let scene = SCNScene(named:"cube.scn")
         detailSceneView.allowsCameraControl = true
-
-        detailSceneView.showsStatistics = true
-      
+        detailSceneView.showsStatistics = false
         detailSceneView.cameraControlConfiguration.allowsTranslation = false
-
         detailSceneView.scene = scene
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        super.prepare(for: segue, sender: sender)
     }
     
-
+*/
 }
