@@ -20,6 +20,10 @@ class CategoryTasksCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        weeklyLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+        checkBox.setImage(UIImage(systemName: "circle"), for: .normal)
+        checkBox.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .selected)
+
         // Initialization code
     }
 
