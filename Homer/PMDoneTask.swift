@@ -139,6 +139,79 @@ class PMDoneTask{
            
        }
     
+    static func fetchDoneTaskOfDay() -> [DoneTask]{
+               
+                var doneTasks: [DoneTask] = []
+                             
+                             let context = getContext()
+                      
+                              let todayDate = Date()
+                              
+                              let dateFormatter = DateFormatter()
+                              dateFormatter.dateFormat = "dd"
+                              let day = dateFormatter.string(from: todayDate)
+                              dateFormatter.dateFormat = "yyyy"
+                              let year = dateFormatter.string(from: todayDate)
+                              dateFormatter.dateFormat = "MM"
+                              let month = dateFormatter.string(from: todayDate)
+                      
+                              dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+                              let startDate = dateFormatter.date(from: "\(year)/\(month)/\(day) 00:00")
+                             
+                             let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
+                      fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ ", startDate! as NSDate,todayDate as NSDate)
+                             
+                             do{
+                                 
+                                 try doneTasks = context.fetch(fetchRequest)
+                                 
+                             } catch let error as NSError{
+                                 
+                                 print("Errore in fetch \(error.code)")
+                                 
+                             }
+                             
+                             return doneTasks
+               
+               
+           }
+    
+    
+    static func fetchDoneTaskOfMonth() -> [DoneTask]{
+        
+         var doneTasks: [DoneTask] = []
+                      
+                      let context = getContext()
+               
+                       let todayDate = Date()
+                       
+                       let dateFormatter = DateFormatter()
+                       dateFormatter.dateFormat = "yyyy"
+                       let year = dateFormatter.string(from: todayDate)
+                       dateFormatter.dateFormat = "MM"
+                       let month = dateFormatter.string(from: todayDate)
+               
+                       dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+                       let startDate = dateFormatter.date(from: "\(year)/\(month)/01 00:00")
+                      
+                      let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
+               fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate < %@ ", startDate! as NSDate,todayDate as NSDate)
+                      
+                      do{
+                          
+                          try doneTasks = context.fetch(fetchRequest)
+                          
+                      } catch let error as NSError{
+                          
+                          print("Errore in fetch \(error.code)")
+                          
+                      }
+                      
+                      return doneTasks
+        
+        
+    }
+    
    /* static func fetchAllDoneTaskOfDay() -> [DoneTask]{
         var doneTasks: [DoneTask] = []
         

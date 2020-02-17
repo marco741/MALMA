@@ -193,6 +193,7 @@
                         <outlet property="ecoPointsText" destination="Ivg-QO-b7G" id="jc7-Hz-2td"/>
                         <outlet property="piggyBank" destination="5LD-00-VMh" id="Hts-8E-2A6"/>
                         <outlet property="savingsText" destination="7BM-RS-CoB" id="eMm-m0-9el"/>
+                        <outlet property="segmentedControl" destination="CV3-PP-aDY" id="nsm-01-a7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJj-h6-POI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

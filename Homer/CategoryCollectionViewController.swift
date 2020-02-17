@@ -16,6 +16,8 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
     @IBOutlet var categoriesCollectionView: UICollectionView!
 
     let categoriesDataSource = CategoriesDataSource()
+    
+    var categories:[Category] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
 
         // Register cell classes
         collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        categories = PMCategory.fetchAllCategory()
 
         // Do any additional setup after loading the view.
     }
@@ -43,18 +47,22 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 12
+        return categories.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoriesCollectionViewCell
 
         // Configure the cell
+        
+        cell.taskNumLabel.text = "\(categories[indexPath.row].tasks?.count ?? 0)"
+        cell.categoryImageView.image = UIImage(named: "\(categories[indexPath.row].image ?? "")")
+        
 
         return cell
     }

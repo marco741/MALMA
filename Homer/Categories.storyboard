@@ -23,7 +23,7 @@
                             <inset key="sectionInset" minX="12" minY="10" maxX="12" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="sQ2-K8-edv">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="sQ2-K8-edv" customClass="CategoriesCollectionViewCell" customModule="Homer" customModuleProvider="target">
                                 <rect key="frame" x="12" y="10" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J5V-5I-kH7" customClass="CategoryContentView" customModule="Homer" customModuleProvider="target">
@@ -62,6 +62,10 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryImageView" destination="7iw-pH-1yO" id="TFD-zQ-icm"/>
+                                    <outlet property="taskNumLabel" destination="kw4-bL-nTg" id="U8n-tf-BDA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
