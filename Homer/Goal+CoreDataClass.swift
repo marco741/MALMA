@@ -2,7 +2,7 @@
 //  Goal+CoreDataClass.swift
 //  Homer
 //
-//  Created by Lorenzo Fasolino on 16/02/2020.
+//  Created by Lorenzo Fasolino on 17/02/2020.
 //  Copyright © 2020 Lorenzo Fasolino. All rights reserved.
 //
 //

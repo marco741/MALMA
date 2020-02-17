@@ -11,11 +11,11 @@ import UIKit
 class TaskTableViewController: UITableViewController {
     
     var tasks:[Task] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tasks = PMTask.fetchAllTask()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,6 +25,24 @@ class TaskTableViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tasks = PMTask.fetchUnselectedTask()
+        self.tableView.reloadData()
+        
+        if(tasks.count == 0){
+            let title = UILabel(frame: CGRect(x: 0, y: 0, width: 220, height: 10))
+            title.font = UIFont.systemFont(ofSize: 18)
+            title.text = "Hai completato tutti i task!"
+            title.sizeToFit()
+            title.center = self.view.center
+            title.center.y = self.view.center.y
+            title.textAlignment = .center
+            self.view.addSubview(title)
+           
+        }
+
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,7 +87,12 @@ class TaskTableViewController: UITableViewController {
         }    
     }
     
-
+    @IBAction func refresh(_ sender: Any) {
+        tasks = PMTask.fetchUnselectedTask()
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
