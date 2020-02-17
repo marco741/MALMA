@@ -65,6 +65,7 @@
                                 <connections>
                                     <outlet property="categoryImageView" destination="7iw-pH-1yO" id="TFD-zQ-icm"/>
                                     <outlet property="taskNumLabel" destination="kw4-bL-nTg" id="U8n-tf-BDA"/>
+                                    <segue destination="nrC-FI-oIp" kind="show" id="BRE-Xw-DYS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -81,6 +82,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUw-9I-6HQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="146.65178571428569"/>
+        </scene>
+        <!--CategoryTasks-->
+        <scene sceneID="6U4-PM-hUR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="categoryTasks" storyboardName="CategoryTasks" id="nrC-FI-oIp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RyD-EA-wlA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPR-cO-Eld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L52-Ql-V0P">

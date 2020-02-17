@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="31V-5y-Mw3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iVR-fT-pwc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CategoryText-->
+        <!--categoryTasks-->
         <scene sceneID="8k9-67-vSj">
             <objects>
-                <viewController id="iVR-fT-pwc" customClass="CategoryTasksViewController" customModule="Homer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="categoryTasks" id="iVR-fT-pwc" customClass="CategoryTasksViewController" customModule="Homer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6J-Ta-nD1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="165" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZHx-lX-7M2">
-                                <rect key="frame" x="0.0" y="137" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryTasksCell" id="sdV-Y4-NPO" customClass="CategoryTasksCell" customModule="Homer" customModuleProvider="target">
@@ -93,7 +93,7 @@
                                 <sections/>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-zE-CLW">
-                                <rect key="frame" x="133.5" y="98" width="147" height="32"/>
+                                <rect key="frame" x="133.5" y="54" width="147" height="32"/>
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="Disabled"/>
@@ -115,7 +115,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nWY-Cv-d9A"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CategoryText" id="oXD-DW-3uD">
+                    <navigationItem key="navigationItem" title="CategoryText" largeTitleDisplayMode="never" id="oXD-DW-3uD">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Cp9-Dj-1RK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="arD-la-5Rw">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
@@ -133,22 +133,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OE-zH-Cys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="502.89855072463774" y="195.53571428571428"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="R3p-OW-rwK">
-            <objects>
-                <navigationController id="31V-5y-Mw3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EpW-6T-e97">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="iVR-fT-pwc" kind="relationship" relationship="rootViewController" id="KIT-xY-Lxp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nUB-aE-Lzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-478" y="196"/>
         </scene>
     </scenes>
     <resources>
