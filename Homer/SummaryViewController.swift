@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SceneKit
 
 class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+    
     @IBOutlet var piggyBank: UIImageView!
-    
     @IBOutlet var earth: UIImageView!
-    
+
     var achievements:[Achievement] = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -51,6 +51,8 @@
 		90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D3E23F5A2C000926738 /* TaskTableViewController.swift */; };
 		90259D4123F5A30E00926738 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4023F5A30E00926738 /* TaskCell.swift */; };
 		90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4223F5AF8A00926738 /* TaskCollection.swift */; };
+		90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */; };
+		90AB077823F85D1B00D930D5 /* cube.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90AB077723F85D1B00D930D5 /* cube.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		90259D3E23F5A2C000926738 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		90259D4023F5A30E00926738 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		90259D4223F5AF8A00926738 /* TaskCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollection.swift; sourceTree = "<group>"; };
+		90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
+		90AB077723F85D1B00D930D5 /* cube.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cube.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,9 +264,11 @@
 		6B81B9E623F6ABDB000BFB0A /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				90AB077723F85D1B00D930D5 /* cube.scn */,
 				6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */,
 				90048EC523F6F26F0089600B /* SummaryViewController.swift */,
 				90048EC723F6F4450089600B /* AchievementCell.swift */,
+				90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */,
 			);
 			name = Summary;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				2357615823F9DE9D00C1D41F /* achievement.json in Resources */,
 				23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */,
 				235EF74C23F6DD7D006EAD45 /* task.json in Resources */,
+				90AB077823F85D1B00D930D5 /* cube.scn in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
 				2357615A23F9E07900C1D41F /* goal.json in Resources */,
@@ -468,6 +475,9 @@
 				235EF72F23F6D11D006EAD45 /* Achievement+CoreDataProperties.swift in Sources */,
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,
 				235EF74723F6D72C006EAD45 /* Populator.swift in Sources */,
+				235EF73323F6D11D006EAD45 /* Task+CoreDataProperties.swift in Sources */,
+				235EF73223F6D11D006EAD45 /* Task+CoreDataClass.swift in Sources */,
+				90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */,
 				235EF72E23F6D11D006EAD45 /* Achievement+CoreDataClass.swift in Sources */,
 				235EF74423F6D1B2006EAD45 /* PMCategory.swift in Sources */,
 				235EF73623F6D11D006EAD45 /* User+CoreDataClass.swift in Sources */,
