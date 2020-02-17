@@ -65,7 +65,7 @@
                                 <connections>
                                     <outlet property="categoryImageView" destination="7iw-pH-1yO" id="TFD-zQ-icm"/>
                                     <outlet property="taskNumLabel" destination="kw4-bL-nTg" id="U8n-tf-BDA"/>
-                                    <segue destination="nrC-FI-oIp" kind="show" id="BRE-Xw-DYS"/>
+                                    <segue destination="nrC-FI-oIp" kind="show" identifier="categoryTasksSegue" id="BRE-Xw-DYS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
