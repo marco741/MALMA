@@ -12,6 +12,8 @@ import SceneKit
 class AchievementDetailViewController: UIViewController {
 
     @IBOutlet var detailSceneView: SCNView!
+    @IBOutlet var achievementTitle: UILabel!
+    @IBOutlet var achievementDesc: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

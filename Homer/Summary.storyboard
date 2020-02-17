@@ -238,6 +238,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="qCp-1P-Xl4"/>
                     <connections>
+                        <outlet property="achievementDesc" destination="fgP-hR-Iqg" id="ETe-pb-3NO"/>
+                        <outlet property="achievementTitle" destination="Hwp-cj-sL0" id="OXR-IH-SYh"/>
                         <outlet property="detailSceneView" destination="nSs-7W-YEc" id="Gcq-ZH-S4o"/>
                     </connections>
                 </viewController>
