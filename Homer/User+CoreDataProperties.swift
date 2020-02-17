@@ -19,5 +19,54 @@ extension User {
 
     @NSManaged public var totEcoPoints: Int32
     @NSManaged public var totSavings: Float
+    
+    
+    func getEcoPointsOfDay() -> Int32{
+        let tasks = PMDoneTask.fetchDoneTaskOfDay()
+        
+        var ecoPoints:Int32 = 0
+        
+        for doneTask in tasks{
+            ecoPoints += doneTask.task?.ecoPoints ?? 0
+        }
+        
+        return ecoPoints
+    }
+    
+    func getEcoPointsOfMonth() -> Int32{
+        let tasks = PMDoneTask.fetchDoneTaskOfMonth()
+          
+          var ecoPoints:Int32 = 0
+          
+          for doneTask in tasks{
+              ecoPoints += doneTask.task?.ecoPoints ?? 0
+          }
+          
+          return ecoPoints
+      }
+    
+    func getSavingsOfDay() -> Float{
+        let tasks = PMDoneTask.fetchDoneTaskOfDay()
+        
+        var savings:Float = 0.0
+        
+        for doneTask in tasks{
+            savings += doneTask.task?.savings ?? 0.0
+        }
+        
+        return savings
+    }
+    
+    func getSavingsOfMonth() -> Float{
+        let tasks = PMDoneTask.fetchDoneTaskOfMonth()
+        
+        var savings:Float = 0.0
+        
+        for doneTask in tasks{
+            savings += doneTask.task?.savings ?? 0.0
+        }
+        
+        return savings
+    }
 
 }

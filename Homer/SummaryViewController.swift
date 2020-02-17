@@ -16,6 +16,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
     @IBOutlet var ecoPointsText: UILabel!
     @IBOutlet var savingsText: UILabel!
     
+    @IBOutlet var segmentedControl: UISegmentedControl!
     
     var achievements:[Achievement] = []
     
@@ -46,6 +47,34 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         
         achievements = PMAchievement.fetchAllAchievement()
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var ecoPoints:Int32 = 0
+        var savings:Float = 0.0
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+             ecoPoints  = PMUser.fetchUser().totEcoPoints
+             savings = PMUser.fetchUser().totSavings
+        case 1:
+             ecoPoints  = PMUser.fetchUser().getEcoPointsOfMonth()
+             savings = PMUser.fetchUser().getSavingsOfMonth()
+        case 2:
+             ecoPoints  = PMUser.fetchUser().getEcoPointsOfDay()
+             savings = PMUser.fetchUser().getSavingsOfDay()
+        default:
+            print("Unexpected behaviour")
+        }
+        
+                   
+        savingsText.text = "\(savings)$"
+        ecoPointsText.text = "\(ecoPoints)EP"
+        
     }
     
     
@@ -53,12 +82,30 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         
         switch sender.selectedSegmentIndex{
         case 0:
+            let ecoPoints  = PMUser.fetchUser().totEcoPoints
+            let savings = PMUser.fetchUser().totSavings
+            
+            savingsText.text = "\(savings)$"
+            ecoPointsText.text = "\(ecoPoints)EP"
+            
             print("first segment")
             
         case 1:
+            let ecoPoints  = PMUser.fetchUser().getEcoPointsOfMonth()
+            let savings = PMUser.fetchUser().getSavingsOfMonth()
+            
+            savingsText.text = "\(savings)$"
+            ecoPointsText.text = "\(ecoPoints)EP"
             print("second segment")
         case 2:
             print("third segment")
+            let ecoPoints  = PMUser.fetchUser().getEcoPointsOfDay()
+            let savings = PMUser.fetchUser().getSavingsOfDay()
+                       
+            savingsText.text = "\(savings)$"
+            ecoPointsText.text = "\(ecoPoints)EP"
+            
+            
         default:
             print("Unexpected behaviour")
         }
