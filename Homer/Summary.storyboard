@@ -23,6 +23,10 @@
                                     <segment title="Last Month"/>
                                     <segment title="Today"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="yp5-LX-OBQ" eventType="valueChanged" id="9z2-GC-3pB"/>
+                                    <action selector="segmentedControlValueChanged:" destination="xLN-mR-Xck" eventType="valueChanged" id="q0a-7X-BlP"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0O-66-h2d">
                                 <rect key="frame" x="10" y="149" width="394" height="220"/>
@@ -186,10 +190,13 @@
                     <connections>
                         <outlet property="achievementCollection" destination="P7v-Z6-bdQ" id="lQf-qA-kOF"/>
                         <outlet property="earth" destination="IRx-1s-J65" id="lHA-dd-V2N"/>
+                        <outlet property="ecoPointsText" destination="Ivg-QO-b7G" id="jc7-Hz-2td"/>
                         <outlet property="piggyBank" destination="5LD-00-VMh" id="Hts-8E-2A6"/>
+                        <outlet property="savingsText" destination="7BM-RS-CoB" id="eMm-m0-9el"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJj-h6-POI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yp5-LX-OBQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1266.6666666666667" y="-230.35714285714283"/>
         </scene>

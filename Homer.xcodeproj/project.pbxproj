@@ -177,6 +177,7 @@
 		23543D0323F45EB60080BDFE /* Homer */ = {
 			isa = PBXGroup;
 			children = (
+				9099D75A23FAA0110063C588 /* AchievementModels */,
 				235EF74823F6DADF006EAD45 /* DBInit */,
 				235EF73923F6D19B006EAD45 /* PersistenceMenegers */,
 				235EF73823F6D122006EAD45 /* DAO */,
@@ -274,6 +275,13 @@
 				90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */,
 			);
 			name = Summary;
+			sourceTree = "<group>";
+		};
+		9099D75A23FAA0110063C588 /* AchievementModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AchievementModels;
 			sourceTree = "<group>";
 		};
 		9AF8D8B223F594A30030FCF1 /* Storyboards */ = {

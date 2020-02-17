@@ -13,7 +13,10 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
     
     @IBOutlet var piggyBank: UIImageView!
     @IBOutlet var earth: UIImageView!
-
+    @IBOutlet var ecoPointsText: UILabel!
+    @IBOutlet var savingsText: UILabel!
+    
+    
     var achievements:[Achievement] = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,7 +49,22 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
     }
     
     
-
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex{
+        case 0:
+            print("first segment")
+            
+        case 1:
+            print("second segment")
+        case 2:
+            print("third segment")
+        default:
+            print("Unexpected behaviour")
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
