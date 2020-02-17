@@ -15,6 +15,9 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "categoryTasksCell", for: indexPath)
+        
+        
+        
         return cell
     }
     

@@ -25,7 +25,7 @@ class AchievementDetailViewController: UIViewController {
             achievementDesc.text = ach.desc
         }
         
-        let scene = SCNScene(named:"cube.scn")
+        let scene = SCNScene(named:"water_medal_bronze.scn")
         
         detailSceneView.allowsCameraControl = true
         detailSceneView.showsStatistics = false

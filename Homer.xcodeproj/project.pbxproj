@@ -55,6 +55,10 @@
 		90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D3E23F5A2C000926738 /* TaskTableViewController.swift */; };
 		90259D4123F5A30E00926738 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4023F5A30E00926738 /* TaskCell.swift */; };
 		90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4223F5AF8A00926738 /* TaskCollection.swift */; };
+		9099D76223FACB5F0063C588 /* water_medal_bronze.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9099D76123FACB5F0063C588 /* water_medal_bronze.obj */; };
+		9099D76423FACB880063C588 /* water_medal_bronze.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9099D76323FACB880063C588 /* water_medal_bronze.scn */; };
+		9099D76623FACF5A0063C588 /* water_medal_silver.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9099D76523FACF5A0063C588 /* water_medal_silver.scn */; };
+		9099D76823FACF8B0063C588 /* water_medal_gold.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9099D76723FACF8B0063C588 /* water_medal_gold.scn */; };
 		90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */; };
 		90AB077823F85D1B00D930D5 /* cube.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90AB077723F85D1B00D930D5 /* cube.scn */; };
 /* End PBXBuildFile section */
@@ -131,6 +135,10 @@
 		90259D3E23F5A2C000926738 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		90259D4023F5A30E00926738 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		90259D4223F5AF8A00926738 /* TaskCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollection.swift; sourceTree = "<group>"; };
+		9099D76123FACB5F0063C588 /* water_medal_bronze.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = water_medal_bronze.obj; path = ../../water_medal_bronze.obj; sourceTree = "<group>"; };
+		9099D76323FACB880063C588 /* water_medal_bronze.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = water_medal_bronze.scn; path = ../../water_medal_bronze.scn; sourceTree = "<group>"; };
+		9099D76523FACF5A0063C588 /* water_medal_silver.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = water_medal_silver.scn; sourceTree = "<group>"; };
+		9099D76723FACF8B0063C588 /* water_medal_gold.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = water_medal_gold.scn; sourceTree = "<group>"; };
 		90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
 		90AB077723F85D1B00D930D5 /* cube.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cube.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,7 +293,6 @@
 		6B81B9E623F6ABDB000BFB0A /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				90AB077723F85D1B00D930D5 /* cube.scn */,
 				6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */,
 				90048EC523F6F26F0089600B /* SummaryViewController.swift */,
 				90048EC723F6F4450089600B /* AchievementCell.swift */,
@@ -297,6 +304,11 @@
 		9099D75A23FAA0110063C588 /* AchievementModels */ = {
 			isa = PBXGroup;
 			children = (
+				9099D76123FACB5F0063C588 /* water_medal_bronze.obj */,
+				9099D76323FACB880063C588 /* water_medal_bronze.scn */,
+				9099D76523FACF5A0063C588 /* water_medal_silver.scn */,
+				9099D76723FACF8B0063C588 /* water_medal_gold.scn */,
+				90AB077723F85D1B00D930D5 /* cube.scn */,
 			);
 			name = AchievementModels;
 			sourceTree = "<group>";
@@ -446,12 +458,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9099D76823FACF8B0063C588 /* water_medal_gold.scn in Resources */,
 				235EF74A23F6DB3C006EAD45 /* categories.json in Resources */,
 				6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */,
+				9099D76423FACB880063C588 /* water_medal_bronze.scn in Resources */,
 				6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */,
 				2357615823F9DE9D00C1D41F /* achievement.json in Resources */,
+				9099D76623FACF5A0063C588 /* water_medal_silver.scn in Resources */,
 				23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */,
 				235EF74C23F6DD7D006EAD45 /* task.json in Resources */,
+				9099D76223FACB5F0063C588 /* water_medal_bronze.obj in Resources */,
 				90AB077823F85D1B00D930D5 /* cube.scn in Resources */,
 				33B9D7EE23FA8D6300BE1FEA /* CategoryTasks.storyboard in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
