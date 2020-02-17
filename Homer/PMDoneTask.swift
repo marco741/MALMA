@@ -212,6 +212,46 @@ class PMDoneTask{
         
     }
     
+    static func fetchDoneTaskOfPreviousDay(task: Task) -> [DoneTask]{
+        
+         var doneTasks: [DoneTask] = []
+                      
+                       let context = getContext()
+               
+                       let previuosDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+                       
+                       let dateFormatter = DateFormatter()
+                       dateFormatter.dateFormat = "dd"
+                       let day = dateFormatter.string(from: previuosDate!)
+                       dateFormatter.dateFormat = "yyyy"
+                       let year = dateFormatter.string(from: previuosDate!)
+                       dateFormatter.dateFormat = "MM"
+                       let month = dateFormatter.string(from: previuosDate!)
+               
+                       dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+                       let startDate = dateFormatter.date(from: "\(year)/\(month)/\(day) 00:00")
+                        let endDate = dateFormatter.date(from: "\(year)/\(month)/\(day) 23:59")
+                      
+                      let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
+                      fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate <= %@ AND task = %@", startDate! as NSDate,endDate! as NSDate,task)
+                      
+                      do{
+                          
+                          try doneTasks = context.fetch(fetchRequest)
+                          
+                      } catch let error as NSError{
+                          
+                          print("Errore in fetch \(error.code)")
+                          
+                      }
+                      
+                      return doneTasks
+        
+        
+    }
+    
+    
+    
    /* static func fetchAllDoneTaskOfDay() -> [DoneTask]{
         var doneTasks: [DoneTask] = []
         
