@@ -39,6 +39,7 @@
 		235EF74723F6D72C006EAD45 /* Populator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EF74623F6D72C006EAD45 /* Populator.swift */; };
 		235EF74A23F6DB3C006EAD45 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 235EF74923F6DB3C006EAD45 /* categories.json */; };
 		235EF74C23F6DD7D006EAD45 /* task.json in Resources */ = {isa = PBXBuildFile; fileRef = 235EF74B23F6DD7D006EAD45 /* task.json */; };
+		23EFDC5323FA9A0500D5F2B9 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EFDC5223FA9A0500D5F2B9 /* CategoriesCollectionViewCell.swift */; };
 		6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9D723F59BBF000BFB0A /* Home.storyboard */; };
 		6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */; };
 		6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */; };
@@ -111,6 +112,7 @@
 		235EF74623F6D72C006EAD45 /* Populator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Populator.swift; sourceTree = "<group>"; };
 		235EF74923F6DB3C006EAD45 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		235EF74B23F6DD7D006EAD45 /* task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = task.json; sourceTree = "<group>"; };
+		23EFDC5223FA9A0500D5F2B9 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B81B9D723F59BBF000BFB0A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				6B81B9E423F6ABD4000BFB0A /* Categories.storyboard */,
 				6B81B9E923F6B68C000BFB0A /* CategoriesDataSource.swift */,
 				6B81B9EF23F6E00D000BFB0A /* CategoryContentView.swift */,
+				23EFDC5223FA9A0500D5F2B9 /* CategoriesCollectionViewCell.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -475,8 +478,6 @@
 				235EF72F23F6D11D006EAD45 /* Achievement+CoreDataProperties.swift in Sources */,
 				90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */,
 				235EF74723F6D72C006EAD45 /* Populator.swift in Sources */,
-				235EF73323F6D11D006EAD45 /* Task+CoreDataProperties.swift in Sources */,
-				235EF73223F6D11D006EAD45 /* Task+CoreDataClass.swift in Sources */,
 				90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */,
 				235EF72E23F6D11D006EAD45 /* Achievement+CoreDataClass.swift in Sources */,
 				235EF74423F6D1B2006EAD45 /* PMCategory.swift in Sources */,
@@ -484,6 +485,7 @@
 				235EF73523F6D11D006EAD45 /* Category+CoreDataProperties.swift in Sources */,
 				90259D4123F5A30E00926738 /* TaskCell.swift in Sources */,
 				2357615D23F9E0E200C1D41F /* Goal+CoreDataClass.swift in Sources */,
+				23EFDC5323FA9A0500D5F2B9 /* CategoriesCollectionViewCell.swift in Sources */,
 				235EF73723F6D11D006EAD45 /* User+CoreDataProperties.swift in Sources */,
 				90048EC823F6F4450089600B /* AchievementCell.swift in Sources */,
 				23543D0723F45EB60080BDFE /* SceneDelegate.swift in Sources */,
