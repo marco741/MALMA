@@ -22,6 +22,7 @@ class TaskCell: UITableViewCell {
     var task : Task? {
         willSet{
             if let cellTask = newValue{
+                print("checked\(cellTask.isChecked())")
                 if(cellTask.isChecked()){
                     CategoryIcon.image = cellTask.getIcon(true)
                     CheckButton.isSelected = true
@@ -57,11 +58,12 @@ class TaskCell: UITableViewCell {
         super.setSelected(selected, animated: true)
         
         if(selected){
-            toggleCheck()
+//            toggleCheck()
         }
     }
     
     private func toggleCheck(){
+        print("toggle")
         if(checked){
             task?.unCheck()
             checked = false
