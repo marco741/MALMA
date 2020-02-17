@@ -25,7 +25,6 @@
                                     <segment title="Today"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentedControlValueChanged:" destination="yp5-LX-OBQ" eventType="valueChanged" id="9z2-GC-3pB"/>
                                     <action selector="segmentedControlValueChanged:" destination="xLN-mR-Xck" eventType="valueChanged" id="q0a-7X-BlP"/>
                                 </connections>
                             </segmentedControl>
@@ -191,7 +190,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJj-h6-POI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="yp5-LX-OBQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1266.6666666666667" y="-230.35714285714283"/>
         </scene>
@@ -204,22 +202,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="z4K-NV-uNI">
-                                <rect key="frame" x="0.0" y="103" width="414" height="439"/>
+                                <rect key="frame" x="15" y="103" width="384" height="439"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwp-cj-sL0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="38.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <color key="textColor" red="0.047058823530000002" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-7W-YEc">
-                                        <rect key="frame" x="0.0" y="53.5" width="414" height="350"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="384" height="350"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="350" id="9j3-1g-0oj"/>
                                         </constraints>
                                     </sceneKitView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-hR-Iqg">
-                                        <rect key="frame" x="0.0" y="418.5" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="418.5" width="384" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -229,9 +227,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="z4K-NV-uNI" firstAttribute="trailing" secondItem="Dxc-Kc-Ila" secondAttribute="trailing" id="5KM-Rf-Irj"/>
-                            <constraint firstItem="z4K-NV-uNI" firstAttribute="leading" secondItem="Dxc-Kc-Ila" secondAttribute="leading" id="IVP-5g-oqv"/>
+                            <constraint firstItem="z4K-NV-uNI" firstAttribute="leading" secondItem="Dxc-Kc-Ila" secondAttribute="leading" constant="15" id="hmB-ub-qgI"/>
                             <constraint firstItem="z4K-NV-uNI" firstAttribute="top" secondItem="Dxc-Kc-Ila" secondAttribute="top" constant="15" id="nz0-mX-ZgQ"/>
+                            <constraint firstAttribute="trailing" secondItem="z4K-NV-uNI" secondAttribute="trailing" constant="15" id="oX3-ug-QhL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dxc-Kc-Ila"/>
                     </view>
