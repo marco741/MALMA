@@ -114,15 +114,6 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfItemsPerRow: CGFloat = 4
@@ -135,6 +126,21 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
             return CGSize(width: width, height: width)
         } else {
             return CGSize(width: 0, height: 0)
+        }
+    }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "achievementDetail"{
+            let detail = segue.destination as! AchievementDetailViewController
+            let index = achievementCollection.indexPathsForSelectedItems?[0].row
+            
+            if let selectedIndex = index {
+                detail.achievement = achievements[selectedIndex]
+            }
         }
     }
 }
