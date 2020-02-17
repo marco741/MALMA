@@ -93,6 +93,45 @@ class TaskTableViewController: UITableViewController {
         self.refreshControl?.endRefreshing()
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        
+        
+        let hideAction = UIContextualAction(style: .normal, title: "Hide") { (action: UIContextualAction, view: UIView, success: (Bool) -> Void) in
+            let task = self.tasks[indexPath.row]
+            
+            if task.priority >= 0 {
+                task.priority = -1
+            } else if task.priority > -5 && task.priority < 0{
+                task.priority -= 1
+            }
+
+            self.tasks.remove(at: indexPath.row)
+            
+            tableView.reloadData()
+            
+            success(true)
+         }
+        
+        hideAction.backgroundColor = UIColor.orange
+
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action: UIContextualAction, view: UIView, success: (Bool) -> Void) in
+                        
+            let task = self.tasks[indexPath.row]
+            task.priority = 0
+            task.disable()
+            self.tasks.remove(at: indexPath.row)
+        
+            tableView.reloadData()
+
+            success(true)
+         }
+        deleteAction.backgroundColor = UIColor.red
+        
+        let config = UISwipeActionsConfiguration(actions: [deleteAction,hideAction])
+        return config
+    }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
