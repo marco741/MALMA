@@ -15,29 +15,19 @@ class AchievementDetailViewController: UIViewController {
     @IBOutlet var achievementTitle: UILabel!
     @IBOutlet var achievementDesc: UILabel!
     
+    var achievement : Achievement?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*
-        let cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        cameraNode.position = SCNVector3(0, 10, 10)
-        scene?.rootNode.addChildNode(cameraNode)
-            
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light?.type = .omni
-        lightNode.position = SCNVector3(x: 0, y: 0, z: 10)
-        scene?.rootNode.addChildNode(lightNode)
-           
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light?.type = .ambient
-        ambientLightNode.light?.color = UIColor.darkGray
-        scene?.rootNode.addChildNode(ambientLightNode)
-        */
-        
+
         let scene = SCNScene(named:"cube.scn")
+        
+       if let ach = achievement {
+        
+        achievementTitle.text = ach.name
+        achievementDesc.text = ach.desc
+        
+        }
         
         detailSceneView.allowsCameraControl = true
         detailSceneView.showsStatistics = false
