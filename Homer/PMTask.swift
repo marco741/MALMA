@@ -71,6 +71,7 @@ class PMTask{
         let context = getContext()
         
         let fetchRequest = NSFetchRequest<Task>(entityName: tableName)
+       fetchRequest.predicate = NSPredicate(format: "state = 'enabled'")
         
         do{
             
