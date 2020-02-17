@@ -15,6 +15,7 @@ class CategoryTasksCell: UITableViewCell {
     @IBOutlet weak var savingsLabel: UILabel!
     @IBOutlet weak var ecoPointsLabel: UILabel!
     @IBOutlet weak var checkBox: UIButton!
+    @IBOutlet weak var enableButton: UIButton!
     
     
     
@@ -33,7 +34,19 @@ class CategoryTasksCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var checked = false
+    
+    @IBAction func checkboxPressed(_ sender: Any) {
+        checkBox.isSelected=(!checkBox.isSelected)
+    }
+    
+    @IBAction func enablePressed(_ sender: Any) {
+        checkBox.isHidden=false
+        enableButton.isHidden=true
+    }
+    
+    
+    
+    
 
     var task: Task? {
         willSet{
@@ -41,10 +54,8 @@ class CategoryTasksCell: UITableViewCell {
                 print("checked\(cellTask.isChecked())")
                if(cellTask.isChecked()){
                    checkBox.isSelected = true
-                   checked = true
                }else{
                    checkBox.isSelected = false
-                   checked = false
                }
                 weeklyLabel.isHidden=(!cellTask.weekly)
                 print("weekly: \(cellTask.weekly)")

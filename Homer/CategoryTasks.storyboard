@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="165" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZHx-lX-7M2">
-                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryTasksCell" id="sdV-Y4-NPO" customClass="CategoryTasksCell" customModule="Homer" customModuleProvider="target">
@@ -51,6 +51,9 @@
                                                     <state key="normal" title="Button" image="circle" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="45"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="checkboxPressed:" destination="sdV-Y4-NPO" eventType="touchUpInside" id="RRG-k7-gNQ"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-yp-bh4" userLabel="DescriptionLabel">
                                                     <rect key="frame" x="67" y="25" width="280" height="85"/>
@@ -70,6 +73,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-YI-4gC" userLabel="EnableButton">
+                                                    <rect key="frame" x="179" y="120" width="60" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="Enable"/>
+                                                    <connections>
+                                                        <action selector="enablePressed:" destination="sdV-Y4-NPO" eventType="touchUpInside" id="n95-hL-0an"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="6Wg-yp-bh4" firstAttribute="top" secondItem="nHO-hF-sWd" secondAttribute="top" constant="25" id="7D6-Kk-vZs"/>
@@ -86,6 +98,7 @@
                                             <outlet property="checkBox" destination="Jkv-Pb-5Gt" id="AYr-7r-yQG"/>
                                             <outlet property="descriptionLabel" destination="6Wg-yp-bh4" id="kNU-vT-kux"/>
                                             <outlet property="ecoPointsLabel" destination="fXy-WE-bCP" id="ITL-RO-lhB"/>
+                                            <outlet property="enableButton" destination="EyM-YI-4gC" id="LB5-Bw-861"/>
                                             <outlet property="savingsLabel" destination="tPz-p2-fQZ" id="vN2-ND-XAt"/>
                                             <outlet property="weeklyLabel" destination="zPD-wx-lKM" id="b7i-e6-xGN"/>
                                         </connections>
@@ -93,33 +106,19 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-zE-CLW">
-                                <rect key="frame" x="133.5" y="54" width="147" height="32"/>
-                                <segments>
-                                    <segment title="All"/>
-                                    <segment title="Disabled"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentedControlValueChanged:" destination="iVR-fT-pwc" eventType="valueChanged" id="QGa-C8-KRO"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="bottom" secondItem="nWY-Cv-d9A" secondAttribute="bottom" id="0Zm-A8-48H"/>
-                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="leading" secondItem="nWY-Cv-d9A" secondAttribute="leading" id="2ob-7P-av5"/>
-                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="top" secondItem="Hqz-zE-CLW" secondAttribute="bottom" constant="8" id="9Ot-J5-ZzZ"/>
-                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="trailing" secondItem="nWY-Cv-d9A" secondAttribute="trailing" id="Wkh-rB-Ege"/>
-                            <constraint firstItem="Hqz-zE-CLW" firstAttribute="top" secondItem="nWY-Cv-d9A" secondAttribute="top" constant="10" id="eeK-wQ-jlu"/>
-                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="centerX" secondItem="nWY-Cv-d9A" secondAttribute="centerX" id="lwR-gi-vxZ"/>
-                            <constraint firstItem="Hqz-zE-CLW" firstAttribute="centerX" secondItem="nWY-Cv-d9A" secondAttribute="centerX" id="x4l-DA-scH"/>
+                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="bottom" secondItem="nWY-Cv-d9A" secondAttribute="bottom" id="Dqv-gl-thO"/>
+                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="top" secondItem="nWY-Cv-d9A" secondAttribute="top" id="Kny-Kb-o13"/>
+                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="trailing" secondItem="nWY-Cv-d9A" secondAttribute="trailing" id="goa-Ui-EsT"/>
+                            <constraint firstItem="ZHx-lX-7M2" firstAttribute="leading" secondItem="nWY-Cv-d9A" secondAttribute="leading" id="pfq-Df-egf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nWY-Cv-d9A"/>
                     </view>
                     <navigationItem key="navigationItem" title="CategoryText" largeTitleDisplayMode="never" id="oXD-DW-3uD"/>
                     <connections>
                         <outlet property="navigationBar" destination="oXD-DW-3uD" id="zmS-eR-Hr9"/>
-                        <outlet property="segmentedControl" destination="Hqz-zE-CLW" id="iDZ-u4-wQ8"/>
                         <outlet property="tableView" destination="ZHx-lX-7M2" id="lpe-tS-h3K"/>
                     </connections>
                 </viewController>
