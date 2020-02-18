@@ -1,90 +1,90 @@
 [
-    {
-        "id": "1",
-        "desc": "Chiudere il rubinetto mentre ti lavi i denti",
-        "ecoPoints": "6",
-        "savings": "0.01",
-        "weekly": "false",
-        "category": "water"
-    },
-    {
-        "id": "2",
-        "desc": "Usare la lavastoviglie invece di lavare a mano i piatti",
-        "ecoPoints": "17",
-        "savings": "0.03",
-        "weekly": "false",
-        "category": "water"
-    },
-    {
-        "id": "3",
-        "desc": "Avviare una lavastoviglie completamente piena",
-        "ecoPoints": "18",
-        "savings": "0.03",
-        "weekly": "false",
-        "category": "water"
-    },
-    {
-        "id": "4",
-        "desc": "Non lasciare in standby la televisione",
-        "ecoPoints": "49",
-        "savings": "0.09",
-        "weekly": "false",
-        "category": "energy"
-    },
-    {
-        "id": "5",
-        "desc": "Prima di usare il phon, asciugare per bene i capelli con l'asciugamano",
-        "ecoPoints": "38",
-        "savings": "0.07",
-        "weekly": "false",
-        "category": "energy"
-    },
-    {
-        "id": "6",
-        "desc": "Utilizzare (e RIutilizzare) una bottiglia di vetro al posto di una di plastica",
-        "ecoPoints": "80",
-        "savings": "1.40",
-        "weekly": "true",
-        "category": "garbage"
-    },
-    {
-        "id": "7",
-        "desc": "Produrre al massimo una busta di indifferenziato a famiglia",
-        "ecoPoints": "150",
-        "savings": "1.20",
-        "weekly": "true",
-        "category": "garbage"
-    },
-    {
-        "id": "8",
-        "desc": "Utilizzare un mezzo pubblico invece di un mezzo privato",
-        "ecoPoints": "150",
-        "savings": "1.50",
-        "weekly": "false",
-        "category": "transport"
-    },
-    {
-        "id": "9",
-        "desc": "Utilizzare un mezzo privato solo se tutti i posti passeggeri sono occupati",
-        "ecoPoints": "120",
-        "savings": "4.00",
-        "weekly": "true",
-        "category": "transport"
-    },
-    {
-        "id": "10",
-        "desc": "Controllare la dispensa prima di fare la spesa",
-        "ecoPoints": "80",
-        "savings": "0.15",
-        "weekly": "true",
-        "category": "food"
-    },
-    {
-        "id": "11",
-        "desc": "Mangiare fuori casa (al ristorante) solo una volta a settimana",
-        "ecoPoints": "100",
-        "savings": "0.20",
-        "weekly": "true",
-        "category": "food"
-    }
+{
+"id": "1",
+"desc": "Turn the tap off when brushing your teeth",
+"ecoPoints": "6",
+"savings": "0.01",
+"weekly": "false",
+"category": "water"
+},
+{
+"id": "2",
+"desc": "Use the dishwasher instead of washing by hand",
+"ecoPoints": "17",
+"savings": "0.03",
+"weekly": "false",
+"category": "water"
+},
+{
+"id": "3",
+"desc": "Start the dishwasher only when full",
+"ecoPoints": "18",
+"savings": "0.03",
+"weekly": "false",
+"category": "water"
+},
+{
+"id": "4",
+"desc": "Don't leave your television on without anyone watching",
+"ecoPoints": "49",
+"savings": "0.09",
+"weekly": "false",
+"category": "energy"
+},
+{
+"id": "5",
+"desc": "Before using the hairdryer, dry your hair as much as you can with a towel",
+"ecoPoints": "38",
+"savings": "0.07",
+"weekly": "false",
+"category": "energy"
+},
+{
+"id": "6",
+"desc": "Use (and re-use) a glass bottle instead of a plastic one",
+"ecoPoints": "80",
+"savings": "1.40",
+"weekly": "true",
+"category": "garbage"
+},
+{
+"id": "7",
+"desc": "Try producing only a bag of mixed waste",
+"ecoPoints": "150",
+"savings": "1.20",
+"weekly": "true",
+"category": "garbage"
+},
+{
+"id": "8",
+"desc": "Use public transport instead of your car",
+"ecoPoints": "150",
+"savings": "1.50",
+"weekly": "false",
+"category": "transport"
+},
+{
+"id": "9",
+"desc": "Use your car only if all the seats are occupied",
+"ecoPoints": "120",
+"savings": "4.00",
+"weekly": "true",
+"category": "transport"
+},
+{
+"id": "10",
+"desc": "Check your food storage before going to buy groceries",
+"ecoPoints": "80",
+"savings": "0.15",
+"weekly": "true",
+"category": "food"
+},
+{
+"id": "11",
+"desc": "Go eat out only once this week",
+"ecoPoints": "100",
+"savings": "0.20",
+"weekly": "true",
+"category": "food"
+}
 ]
