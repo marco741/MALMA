@@ -23,6 +23,7 @@ class PMDoneTask{
         
     }
     
+    @discardableResult
     static func newDoneTask(task: Task) -> DoneTask{
         let context = getContext()
         

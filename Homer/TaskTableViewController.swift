@@ -26,7 +26,7 @@ class TaskTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        tasks = PMTask.fetchUnselectedTask()
+        tasks = PMTask.fetchUnselectedTask(true)
         self.tableView.reloadData()
         
         if(tasks.count == 0){
@@ -88,7 +88,7 @@ class TaskTableViewController: UITableViewController {
     }
     
     @IBAction func refresh(_ sender: Any) {
-        tasks = PMTask.fetchUnselectedTask()
+        tasks = PMTask.fetchUnselectedTask(true)
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
