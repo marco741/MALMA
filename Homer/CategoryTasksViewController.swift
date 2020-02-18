@@ -31,7 +31,7 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate, UITabl
             task = disabledTasks[indexPath.row]
         }
         cell.descriptionLabel.text = task.desc
-        cell.savingsLabel.text = "\(task.savings)$"
+        cell.savingsLabel.text = String(format: "%.2f$", task.savings)
         cell.ecoPointsLabel.text = "\(task.ecoPoints)EP"
         cell.checkBox.isSelected = task.isChecked()
         cell.checkBox.isHidden = false

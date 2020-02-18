@@ -34,7 +34,7 @@ class TaskCell: UITableViewCell {
                 }
                 
                 EcoPointsText.text = String(cellTask.ecoPoints) + "EP"
-                SavingsText.text = String(cellTask.savings) + "$"
+                SavingsText.text = String(format: "%.2f$", cellTask.savings)
                 DescriptionText.text = cellTask.desc
             }
         }
