@@ -12,7 +12,6 @@ import SceneKit
 class AchievementDetailViewController: UIViewController {
 
     @IBOutlet var detailSceneView: SCNView!
-    @IBOutlet var achievementTitle: UILabel!
     @IBOutlet var achievementDesc: UILabel!
     
     var achievement : Achievement?
@@ -24,7 +23,7 @@ class AchievementDetailViewController: UIViewController {
         
        if let ach = achievement {
         
-        achievementTitle.text = ach.name
+        navigationItem.title = ach.name
         achievementDesc.text = ach.desc
         
         }
@@ -33,6 +32,7 @@ class AchievementDetailViewController: UIViewController {
         detailSceneView.showsStatistics = false
         detailSceneView.cameraControlConfiguration.allowsTranslation = false
         detailSceneView.scene = scene
+        navigationController?.navigationBar.tintColor = UIColor(red: 18 / 255, green: 148 / 255, blue: 148 / 255, alpha: 1.0)
     }
     
     
