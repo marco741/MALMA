@@ -77,7 +77,9 @@
                                                     <rect key="frame" x="179" y="120" width="60" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <state key="normal" title="Enable"/>
+                                                    <state key="normal" title="Enable">
+                                                        <color key="titleColor" red="0.070588235289999995" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="enablePressed:" destination="sdV-Y4-NPO" eventType="touchUpInside" id="n95-hL-0an"/>
                                                     </connections>
