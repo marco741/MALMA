@@ -46,17 +46,14 @@ extension Task {
         user.totSavings += savings
         user.totEcoPoints += ecoPoints
         PMUser.saveContext()
-        
+
         let achievements = PMAchievement.fetchLocked()
-        
-        for achievement in achievements{
-            
-            if(achievement.checkDone()){
+
+        for achievement in achievements {
+            if achievement.checkDone() {
                 print("premio ricevuto")
             }
-            
         }
-        
     }
 
     func unCheck() {
@@ -79,6 +76,10 @@ extension Task {
 
         let user = PMUser.fetchUser()
         user.totSavings -= savings
+
+        if user.totSavings < 0 {
+            user.totSavings = 0
+        }
         user.totEcoPoints -= ecoPoints
         PMUser.saveContext()
     }
@@ -115,15 +116,14 @@ extension Task {
 
     func checkForPriority() {
         if priority > 0 {
-            
-            var doneTasks:[DoneTask]
-            
-            if(weekly){
+            var doneTasks: [DoneTask]
+
+            if weekly {
                 doneTasks = PMDoneTask.fetchDoneTaskOfPreviousWeek(task: self)
-            }else{
+            } else {
                 doneTasks = PMDoneTask.fetchDoneTaskOfPreviousDay(task: self)
             }
-            
+
             if doneTasks.count <= 0 {
                 priority = 0
                 PMTask.saveContext()
