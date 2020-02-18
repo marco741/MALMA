@@ -19,6 +19,9 @@ class CategoryTasksCell: UITableViewCell {
     
     
     var task: Task?
+    var tableView:UITableView?
+    var disabledTasks:[Task]?
+    var reloadTasks:()->()={}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,6 +55,13 @@ class CategoryTasksCell: UITableViewCell {
         checkBox.isHidden=false
         enableButton.isHidden=true
         task?.enable()
+        reloadTasks()
+        
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+            self.tableView?.beginUpdates()
+            self.tableView?.endUpdates()
+        }
 
     }
     

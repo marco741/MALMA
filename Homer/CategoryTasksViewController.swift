@@ -45,6 +45,10 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
             switchState(cell)
         }
         cell.task=task
+        cell.tableView=tableView
+        cell.disabledTasks=disabledTasks
+        cell.reloadTasks=reloadTasks
+        
         return cell
     }
     
@@ -146,8 +150,8 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
         }
         
     }
-    
-    private func reloadTasks(){
+
+    func reloadTasks(){
         print("ricarico i task")
         NStasks=PMCategory.fetchByName(name: category)[0].tasks!
         allTasks = []
