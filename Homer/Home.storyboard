@@ -31,7 +31,7 @@
         <scene sceneID="RJy-Rh-6W1">
             <objects>
                 <tableViewController id="h9D-gg-ipo" customClass="TaskTableViewController" customModule="Homer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="290" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SSm-Hg-Iwi">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="290" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SSm-Hg-Iwi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -78,7 +78,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-Lb-m2z">
-                                            <rect key="frame" x="185" y="234" width="45" height="45"/>
+                                            <rect key="frame" x="184.5" y="234" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="Dy9-TD-9Ee"/>
                                                 <constraint firstAttribute="width" constant="45" id="SSr-fn-zhr"/>
