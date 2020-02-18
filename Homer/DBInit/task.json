@@ -142,13 +142,5 @@
            "savings": "1.00",
            "weekly": "false",
            "category": "water"
-      },
-      {
-           "id": "19",
-           "desc": "Don't spend too much time showering ( Max 10 min )",
-           "ecoPoints": "150",
-           "savings": "1.00",
-           "weekly": "false",
-           "category": "water"
       }
 ]
