@@ -2,25 +2,25 @@
   [
     {
       "category": "water",
-      "achievement": "Idraulico",
+      "achievement": "Plumber",
       "goal": "2",
       "below": "true"
     },
     {
       "category": "energy",
-      "achievement": "Elettricista",
+      "achievement": "Electrician",
       "goal": "2",
       "below": "true"
     },
     {
       "category": "garbage",
-      "achievement": "Spazzino",
+      "achievement": "Street Sweeper",
       "goal": "2",
       "below": "false"
     },
     {
       "category": "transport",
-      "achievement": "Viaggiatore",
+      "achievement": "Traveler",
       "goal": "2",
       "below": "false"
     },
