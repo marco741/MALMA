@@ -78,9 +78,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-Lb-m2z">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-Lb-m2z">
                                             <rect key="frame" x="185" y="234" width="45" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="Dy9-TD-9Ee"/>
+                                                <constraint firstAttribute="width" constant="45" id="SSr-fn-zhr"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                             <color key="tintColor" red="0.070588235294117646" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Button" image="circle" catalog="system">
@@ -92,11 +95,13 @@
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="nLi-Lb-m2z" firstAttribute="bottom" secondItem="gda-2Q-2bP" secondAttribute="bottomMargin" id="2Vy-jK-EPk"/>
                                         <constraint firstItem="pEc-yZ-ZNf" firstAttribute="top" secondItem="gda-2Q-2bP" secondAttribute="topMargin" constant="20" id="3uc-GX-6SC"/>
                                         <constraint firstItem="opK-Pf-uGV" firstAttribute="centerX" secondItem="gda-2Q-2bP" secondAttribute="centerX" id="EzC-HN-Hwu"/>
                                         <constraint firstItem="opK-Pf-uGV" firstAttribute="top" secondItem="v8h-tT-Qmm" secondAttribute="bottom" constant="10" id="GDO-8F-X0i"/>
                                         <constraint firstItem="v8h-tT-Qmm" firstAttribute="centerX" secondItem="gda-2Q-2bP" secondAttribute="centerX" id="H8B-ka-Lxj"/>
                                         <constraint firstItem="wX0-fc-vZJ" firstAttribute="leading" secondItem="gda-2Q-2bP" secondAttribute="leading" constant="20" id="LXE-6Q-Pmx"/>
+                                        <constraint firstItem="nLi-Lb-m2z" firstAttribute="centerX" secondItem="opK-Pf-uGV" secondAttribute="centerX" id="Nf9-Fd-ZhN"/>
                                         <constraint firstAttribute="bottom" secondItem="JoH-ZX-o1N" secondAttribute="bottom" constant="20" id="QH4-Z5-dvO"/>
                                         <constraint firstAttribute="bottom" secondItem="wX0-fc-vZJ" secondAttribute="bottom" constant="20" id="Txt-1U-cjg"/>
                                         <constraint firstItem="v8h-tT-Qmm" firstAttribute="top" secondItem="pEc-yZ-ZNf" secondAttribute="bottom" constant="28.5" id="WjR-C7-bWx"/>
@@ -123,6 +128,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Todos" id="OkV-Kt-mPv"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="WlU-xD-fO7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="refresh:" destination="h9D-gg-ipo" eventType="valueChanged" id="Pz0-zr-b1u"/>
