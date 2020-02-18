@@ -73,9 +73,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-YI-4gC" userLabel="EnableButton">
-                                                    <rect key="frame" x="179" y="120" width="60" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-YI-4gC" userLabel="EnableButton">
+                                                    <rect key="frame" x="179" y="120" width="60" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Enable">
                                                         <color key="titleColor" name="light-green"/>
@@ -93,6 +92,9 @@
                                                 <constraint firstItem="6Wg-yp-bh4" firstAttribute="centerX" secondItem="nHO-hF-sWd" secondAttribute="centerX" id="Zfa-N5-IGX"/>
                                                 <constraint firstItem="Jkv-Pb-5Gt" firstAttribute="centerX" secondItem="nHO-hF-sWd" secondAttribute="centerX" id="ayc-io-0x4"/>
                                                 <constraint firstAttribute="bottom" secondItem="tPz-p2-fQZ" secondAttribute="bottom" constant="20" id="br1-rE-v2I"/>
+                                                <constraint firstItem="EyM-YI-4gC" firstAttribute="centerY" secondItem="Jkv-Pb-5Gt" secondAttribute="centerY" id="cDu-aY-oQF"/>
+                                                <constraint firstItem="EyM-YI-4gC" firstAttribute="leading" secondItem="nHO-hF-sWd" secondAttribute="leading" constant="179" id="dZW-Xe-kdu"/>
+                                                <constraint firstItem="EyM-YI-4gC" firstAttribute="top" secondItem="6Wg-yp-bh4" secondAttribute="bottom" constant="10" id="oxn-nc-xC8"/>
                                                 <constraint firstItem="tPz-p2-fQZ" firstAttribute="leading" secondItem="nHO-hF-sWd" secondAttribute="leading" constant="20" id="p9P-81-Hxc"/>
                                                 <constraint firstItem="Jkv-Pb-5Gt" firstAttribute="top" secondItem="6Wg-yp-bh4" secondAttribute="bottom" constant="5" id="ysM-ch-Zp8"/>
                                             </constraints>
