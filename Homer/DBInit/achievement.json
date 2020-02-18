@@ -1,26 +1,26 @@
 [
     {
-        "name": "Idraulico",
+        "name": "Aquaman",
         "image": "water",
         "desc": "Completa 4 task della categoria water"
     },
     {
-        "name": "Elettricista",
+        "name": "Zeus",
         "image": "energy",
         "desc": "Completa 4 task della categoria energy"
     },
     {
-        "name": "Spazzino",
+        "name": "Garbege Annihilator",
         "image": "garbage",
         "desc": "Completa 4 task della categoria garbage"
     },
     {
-        "name": "Viaggiatore",
+        "name": "Green Foot",
         "image": "transport",
         "desc": "Completa 4 task della categoria transport"
     },
     {
-        "name": "Chef",
+        "name": "Too good to go",
         "image": "food",
         "desc": "Completa 4 task della categoria food"
     }

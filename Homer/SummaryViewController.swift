@@ -48,9 +48,6 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         achievementCollection.dataSource = self
         
         achievements = PMAchievement.fetchAllAchievement()
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

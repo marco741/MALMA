@@ -2,31 +2,31 @@
   [
     {
       "category": "water",
-      "achievement": "Idraulico",
+      "achievement": "Aquaman",
       "goal": "4",
       "below": "true"
     },
     {
       "category": "energy",
-      "achievement": "Elettricista",
+      "achievement": "Zeus",
       "goal": "4",
       "below": "true"
     },
     {
       "category": "garbage",
-      "achievement": "Spazzino",
+      "achievement": "Garbage Annihilator",
       "goal": "4",
       "below": "false"
     },
     {
       "category": "transport",
-      "achievement": "Viaggiatore",
+      "achievement": "Green Foot",
       "goal": "4",
       "below": "false"
     },
     {
       "category": "food",
-      "achievement": "Chef",
+      "achievement": "Too good to go",
       "goal": "4",
       "below": "false"
     }

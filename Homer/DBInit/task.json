@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "desc": "Chiudere il rubinetto mentre ti lavi i denti",
+        "desc": "Turn the tap off when brushing your teeth",
         "ecoPoints": "6",
         "savings": "0.01",
         "weekly": "false",
@@ -9,7 +9,7 @@
     },
     {
         "id": "2",
-        "desc": "Usare la lavastoviglie invece di lavare a mano i piatti",
+        "desc": "Use the dishwasher instead of washing by hand",
         "ecoPoints": "17",
         "savings": "0.03",
         "weekly": "false",
@@ -17,7 +17,7 @@
     },
     {
         "id": "3",
-        "desc": "Avviare una lavastoviglie completamente piena",
+        "desc": "Start the dishwasher only when full",
         "ecoPoints": "18",
         "savings": "0.03",
         "weekly": "false",
@@ -25,7 +25,7 @@
     },
     {
         "id": "4",
-        "desc": "Non lasciare in standby la televisione",
+        "desc": "Don't leave your television on without anyone watching",
         "ecoPoints": "49",
         "savings": "0.09",
         "weekly": "false",
@@ -33,7 +33,7 @@
     },
     {
         "id": "5",
-        "desc": "Prima di usare il phon, asciugare per bene i capelli con l'asciugamano",
+        "desc": "Before using the hairdryer, dry your hair as much as you can with a towel",
         "ecoPoints": "38",
         "savings": "0.07",
         "weekly": "false",
@@ -41,7 +41,7 @@
     },
     {
         "id": "6",
-        "desc": "Utilizzare (e RIutilizzare) una bottiglia di vetro al posto di una di plastica",
+        "desc": "Use (and re-use) a glass bottle instead of a plastic one",
         "ecoPoints": "80",
         "savings": "1.40",
         "weekly": "true",
@@ -49,7 +49,7 @@
     },
     {
         "id": "7",
-        "desc": "Produrre al massimo una busta di indifferenziato a famiglia",
+        "desc": "Try producing only a bag of mixed waste",
         "ecoPoints": "150",
         "savings": "1.20",
         "weekly": "true",
@@ -57,7 +57,7 @@
     },
     {
         "id": "8",
-        "desc": "Utilizzare un mezzo pubblico invece di un mezzo privato",
+        "desc": "Use public trasnport instead of your car",
         "ecoPoints": "150",
         "savings": "1.50",
         "weekly": "false",
@@ -65,7 +65,7 @@
     },
     {
         "id": "9",
-        "desc": "Utilizzare un mezzo privato solo se tutti i posti passeggeri sono occupati",
+        "desc": "Use your car only if all the seats are occupied",
         "ecoPoints": "120",
         "savings": "4.00",
         "weekly": "true",
@@ -73,7 +73,7 @@
     },
     {
         "id": "10",
-        "desc": "Controllare la dispensa prima di fare la spesa",
+        "desc": "Check your food storage before going to buy groceries",
         "ecoPoints": "80",
         "savings": "0.15",
         "weekly": "true",
@@ -81,10 +81,74 @@
     },
     {
         "id": "11",
-        "desc": "Mangiare fuori casa (al ristorante) solo una volta a settimana",
+        "desc": "Go eat out only once this week",
         "ecoPoints": "100",
         "savings": "0.20",
         "weekly": "true",
         "category": "food"
-    }
+    },
+    {
+        "id": "12",
+        "desc": "Don't use plastic cutlery",
+        "ecoPoints": "100",
+        "savings": "0.20",
+        "weekly": "true",
+        "category": "garbage"
+    },
+    {
+         "id": "13",
+         "desc": "Take your time to recycle properly",
+         "ecoPoints": "200",
+         "savings": "0.01",
+         "weekly": "false",
+         "category": "garbage"
+    },
+    {
+         "id": "14",
+         "desc": "When you see trash on the street, pick it up and dispose it properly",
+         "ecoPoints": "100",
+         "savings": "0.20",
+         "weekly": "false",
+         "category": "garbage"
+    },
+    {
+          "id": "15",
+          "desc": "Cook something with the leftovers in your fridge",
+          "ecoPoints": "100",
+          "savings": "0.20",
+          "weekly": "false",
+          "category": "food"
+     },
+     {
+          "id": "16",
+          "desc": "Cook the right amount of food so that no leftover remain",
+          "ecoPoints": "150",
+          "savings": "1.00",
+          "weekly": "false",
+          "category": "food"
+     },
+     {
+          "id": "17",
+          "desc": "Bring a reusable water bottle instead of buying one",
+          "ecoPoints": "150",
+          "savings": "1.00",
+          "weekly": "false",
+          "category": "garbage"
+     },
+     {
+           "id": "18",
+           "desc": "Don't spend too much time showering ( Max 10 min )",
+           "ecoPoints": "150",
+           "savings": "1.00",
+           "weekly": "false",
+           "category": "water"
+      },
+      {
+           "id": "19",
+           "desc": "Don't spend too much time showering ( Max 10 min )",
+           "ecoPoints": "150",
+           "savings": "1.00",
+           "weekly": "false",
+           "category": "water"
+      }
 ]
