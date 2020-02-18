@@ -1,27 +1,27 @@
 [
     {
-        "name": "Idraulico",
+        "name": "Plumber",
         "image": "water",
-        "desc": "Completa 4 task della categoria water"
+        "desc": "Complete 4 tasks of the water category"
     },
     {
-        "name": "Elettricista",
+        "name": "Electrician",
         "image": "energy",
-        "desc": "Completa 4 task della categoria energy"
+        "desc": "Complete 4 tasks of the energy category"
     },
     {
-        "name": "Spazzino",
+        "name": "Street Sweeper",
         "image": "garbage",
-        "desc": "Completa 4 task della categoria garbage"
+        "desc": "Complete 4 tasks of the garbage category"
     },
     {
-        "name": "Viaggiatore",
+        "name": "Traveler",
         "image": "transport",
-        "desc": "Completa 4 task della categoria transport"
+        "desc": "Complete 4 tasks of the transport category"
     },
     {
         "name": "Chef",
         "image": "food",
-        "desc": "Completa 4 task della categoria food"
+        "desc": "Complete 4 tasks of the food category"
     }
 ]
