@@ -130,6 +130,10 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate, UITabl
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     private func switchState(_ cell: CategoryTasksCell) {
         print("switch!")
         cell.checkBox.isHidden = (!cell.checkBox.isHidden)
