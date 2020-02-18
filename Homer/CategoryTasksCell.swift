@@ -9,20 +9,18 @@
 import UIKit
 
 class CategoryTasksCell: UITableViewCell {
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var weeklyLabel: UILabel!
+    @IBOutlet var savingsLabel: UILabel!
+    @IBOutlet var ecoPointsLabel: UILabel!
+    @IBOutlet var checkBox: UIButton!
+    @IBOutlet var enableButton: UIButton!
 
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var weeklyLabel: UILabel!
-    @IBOutlet weak var savingsLabel: UILabel!
-    @IBOutlet weak var ecoPointsLabel: UILabel!
-    @IBOutlet weak var checkBox: UIButton!
-    @IBOutlet weak var enableButton: UIButton!
-    
-    
     var task: Task?
-    var tableView:UITableView?
-    var disabledTasks:[Task]?
-    var reloadTasks:()->()={}
-    
+    var tableView: UITableView?
+    var disabledTasks: [Task]?
+    var reloadTasks: () -> () = {}
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -38,25 +36,24 @@ class CategoryTasksCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
+
     @IBAction func checkboxPressed(_ sender: Any) {
         if checkBox.isSelected {
             task?.unCheck()
-        }
-        else {
+        } else {
             task?.check()
         }
-        checkBox.isSelected=(!checkBox.isSelected)
+        checkBox.isSelected = (!checkBox.isSelected)
     }
-    
-    
+
     @IBAction func enablePressed(_ sender: Any) {
-        checkBox.isHidden=false
-        enableButton.isHidden=true
+        if CategoryTasksViewController.segmentedControlState == 0 {
+            checkBox.isHidden = false
+            enableButton.isHidden = true
+        }
         task?.enable()
         reloadTasks()
-        let indexPath = (self.tableView?.indexPath(for: self))!
+        let indexPath = (tableView?.indexPath(for: self))!
         DispatchQueue.main.async {
             if CategoryTasksViewController.segmentedControlState == 0 {
                 self.tableView?.reloadRows(at: [indexPath], with: .right)
@@ -66,13 +63,5 @@ class CategoryTasksCell: UITableViewCell {
             self.tableView?.beginUpdates()
             self.tableView?.endUpdates()
         }
-
     }
-    
-    
-    
-    
-
-
-
 }

@@ -51,17 +51,34 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var navigationBar: UINavigationItem!
     @IBOutlet var tableView: UITableView!
     
-//    Delete
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        print("edit mode!")
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            let task: Task = allTasks[indexPath.row]
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        print("edit mode!")
+//        if editingStyle == .delete {
+//            // Delete the row from the data source
+//            let task: Task = allTasks[indexPath.row]
+//            task.disable()
+//            tableView.reloadRows(at: [indexPath], with: .right)
+//
+//            print("delete!")
+//        }
+//    }
+    
+    //    Delete
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Disable") { (action: UIContextualAction, view: UIView, success: (Bool) -> Void) in
+            
+            let task: Task = self.allTasks[indexPath.row]
             task.disable()
             tableView.reloadRows(at: [indexPath], with: .right)
             
             print("delete!")
+            
+            success(true)
         }
+        deleteAction.backgroundColor = UIColor.red
+        
+        let config = UISwipeActionsConfiguration(actions: [deleteAction])
+        return config
     }
     
 //    Delete funzionante solo per task con stato non "disabled"
