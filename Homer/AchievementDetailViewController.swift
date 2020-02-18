@@ -6,45 +6,51 @@
 //  Copyright © 2020 Lorenzo Fasolino. All rights reserved.
 //
 
-import UIKit
 import SceneKit
+import UIKit
 
 class AchievementDetailViewController: UIViewController {
-
     @IBOutlet var detailSceneView: SCNView!
     @IBOutlet var achievementDesc: UILabel!
-    
-    var achievement : Achievement?
-    
+    var scene: SCNScene?
+
+    var achievement: Achievement?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let scene = SCNScene(named:"cube.scn")
-        
-       if let ach = achievement {
-        
-        navigationItem.title = ach.name
-        achievementDesc.text = ach.desc
-        
+        scene = SCNScene(named: "cube.scn")
+
+        if let ach = achievement {
+            navigationItem.title = ach.name
+            achievementDesc.text = ach.desc
         }
-        
+
         detailSceneView.allowsCameraControl = true
         detailSceneView.showsStatistics = false
         detailSceneView.cameraControlConfiguration.allowsTranslation = false
+        scene?.background.contents = UIColor(named: "TotalWhiteBlack")
         detailSceneView.scene = scene
-        navigationController?.navigationBar.tintColor = UIColor(red: 18 / 255, green: 148 / 255, blue: 148 / 255, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = UIColor(named: "light-green")
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        scene?.background.contents = UIColor(named: "TotalWhiteBlack")
     }
-    
-*/
+
+    /* /Users/marcodellarocca/Documents/Swift Projects/iOS/MALMA/Homer/CategoryTasks.storyboard
+     // MARK: - Navigation
+
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+     }
+
+     */
 }
