@@ -56,9 +56,13 @@ class CategoryTasksCell: UITableViewCell {
         enableButton.isHidden=true
         task?.enable()
         reloadTasks()
-        
+        let indexPath = (self.tableView?.indexPath(for: self))!
         DispatchQueue.main.async {
-            self.tableView?.reloadData()
+            if CategoryTasksViewController.segmentedControlState == 0 {
+                self.tableView?.reloadRows(at: [indexPath], with: .right)
+            } else {
+                self.tableView?.deleteRows(at: [indexPath], with: .right)
+            }
             self.tableView?.beginUpdates()
             self.tableView?.endUpdates()
         }

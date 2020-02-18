@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Summary View Controller-->
+        <!--Summary-->
         <scene sceneID="CF9-v8-fqf">
             <objects>
                 <viewController storyboardIdentifier="Summary" id="xLN-mR-Xck" customClass="SummaryViewController" customModule="Homer" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,7 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oo4-qH-3A1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d5b-64-D7w"/>
+                    <navigationItem key="navigationItem" title="Summary" id="d5b-64-D7w"/>
                     <connections>
                         <outlet property="achievementCollection" destination="P7v-Z6-bdQ" id="lQf-qA-kOF"/>
                         <outlet property="earth" destination="IRx-1s-J65" id="lHA-dd-V2N"/>
@@ -204,22 +204,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="z4K-NV-uNI">
-                                <rect key="frame" x="0.0" y="103" width="414" height="439"/>
+                                <rect key="frame" x="15" y="88" width="384" height="385.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwp-cj-sL0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                        <color key="textColor" red="0.047058823530000002" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-7W-YEc">
-                                        <rect key="frame" x="0.0" y="53.5" width="414" height="350"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="350"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="350" id="9j3-1g-0oj"/>
+                                            <constraint firstAttribute="height" constant="350" id="KPS-Gi-ZCd"/>
                                         </constraints>
                                     </sceneKitView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-hR-Iqg">
-                                        <rect key="frame" x="0.0" y="418.5" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="365" width="384" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -229,16 +223,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="z4K-NV-uNI" firstAttribute="trailing" secondItem="Dxc-Kc-Ila" secondAttribute="trailing" id="5KM-Rf-Irj"/>
-                            <constraint firstItem="z4K-NV-uNI" firstAttribute="leading" secondItem="Dxc-Kc-Ila" secondAttribute="leading" id="IVP-5g-oqv"/>
-                            <constraint firstItem="z4K-NV-uNI" firstAttribute="top" secondItem="Dxc-Kc-Ila" secondAttribute="top" constant="15" id="nz0-mX-ZgQ"/>
+                            <constraint firstItem="z4K-NV-uNI" firstAttribute="leading" secondItem="Dxc-Kc-Ila" secondAttribute="leading" constant="15" id="SHX-Zj-DLg"/>
+                            <constraint firstItem="z4K-NV-uNI" firstAttribute="trailing" secondItem="Dxc-Kc-Ila" secondAttribute="trailing" constant="-15" id="l2Q-6e-4gQ"/>
+                            <constraint firstItem="z4K-NV-uNI" firstAttribute="top" secondItem="Dxc-Kc-Ila" secondAttribute="top" id="wEp-3m-l7z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dxc-Kc-Ila"/>
                     </view>
                     <navigationItem key="navigationItem" id="qCp-1P-Xl4"/>
                     <connections>
                         <outlet property="achievementDesc" destination="fgP-hR-Iqg" id="ETe-pb-3NO"/>
-                        <outlet property="achievementTitle" destination="Hwp-cj-sL0" id="OXR-IH-SYh"/>
                         <outlet property="detailSceneView" destination="nSs-7W-YEc" id="Gcq-ZH-S4o"/>
                     </connections>
                 </viewController>
@@ -256,6 +249,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wyu-Qc-PTl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="dark-green"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -272,6 +268,9 @@
         <image name="energy" width="512" height="512"/>
         <image name="piggy-bank" width="512" height="512"/>
         <image name="star" catalog="system" width="64" height="58"/>
+        <namedColor name="dark-green">
+            <color red="0.046999998390674591" green="0.37999999523162842" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="grey">
             <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
