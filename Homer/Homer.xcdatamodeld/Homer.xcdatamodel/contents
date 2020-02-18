@@ -19,6 +19,7 @@
     <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="below" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="goal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="achivement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Achievement" inverseName="goals" inverseEntity="Achievement"/>
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="goals" inverseEntity="Task"/>
@@ -43,7 +44,7 @@
         <element name="Achievement" positionX="615.9140625" positionY="293.37890625" width="128" height="118"/>
         <element name="Category" positionX="84.328125" positionY="366.25" width="128" height="88"/>
         <element name="DoneTask" positionX="99.5859375" positionY="257.4296875" width="128" height="73"/>
-        <element name="Goal" positionX="591.80078125" positionY="504.25390625" width="128" height="118"/>
+        <element name="Goal" positionX="591.80078125" positionY="504.25390625" width="128" height="133"/>
         <element name="Task" positionX="421.07421875" positionY="337.41796875" width="128" height="193"/>
         <element name="User" positionX="394.49609375" positionY="178.66796875" width="128" height="73"/>
     </elements>

@@ -33,6 +33,7 @@ class PMGoal{
         goal.category = category
         goal.below = below
         goal.achivement = achivement
+        goal.done = false
         
         
         return goal
@@ -56,6 +57,32 @@ class PMGoal{
         }
         
         return goals
+        
+    }
+    
+    static func verifyGoal(goal: Goal) -> Bool{
+        
+        let category = PMCategory.fetchByName(name: goal.category!)[0]
+        
+        let tasks = category.tasks
+        
+        var done = 0
+        
+        for task in tasks!{
+            let t  = task as! Task
+            
+            if(t.doneNum > 0){
+                done += 1
+            }
+        }
+        
+        if(done >= goal.goal){
+            return true
+        }else{
+            return false
+        }
+        
+        
         
     }
     

@@ -30,7 +30,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
         
-        cell.cellImage.image = UIImage(named: achievements[indexPath.row].image!)
+        cell.cellImage.image = achievements[indexPath.row].getIcon()
         
         return cell
     }
@@ -76,6 +76,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
                    
         savingsText.text = "\(savings)$"
         ecoPointsText.text = "\(ecoPoints)EP"
+        
+        achievements = PMAchievement.fetchAllAchievement()
+        self.achievementCollection.reloadData()
         
     }
     

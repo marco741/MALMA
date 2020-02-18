@@ -46,6 +46,17 @@ extension Task {
         user.totSavings += savings
         user.totEcoPoints += ecoPoints
         PMUser.saveContext()
+        
+        let achievements = PMAchievement.fetchLocked()
+        
+        for achievement in achievements{
+            
+            if(achievement.checkDone()){
+                print("premio ricevuto")
+            }
+            
+        }
+        
     }
 
     func unCheck() {
