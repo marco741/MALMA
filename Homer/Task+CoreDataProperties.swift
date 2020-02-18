@@ -48,6 +48,17 @@ extension Task {
         user.totSavings += self.savings
         user.totEcoPoints += self.ecoPoints
         PMUser.saveContext()
+        
+        let achievements = PMAchievement.fetchLocked()
+        
+        for achievement in achievements{
+            
+            if(achievement.checkDone()){
+                print("premio ricevuto")
+            }
+            
+        }
+        
     }
     
     

@@ -3,31 +3,31 @@
     {
       "category": "water",
       "achievement": "Idraulico",
-      "goal": "4",
+      "goal": "2",
       "below": "true"
     },
     {
       "category": "energy",
       "achievement": "Elettricista",
-      "goal": "4",
+      "goal": "2",
       "below": "true"
     },
     {
       "category": "garbage",
       "achievement": "Spazzino",
-      "goal": "4",
+      "goal": "2",
       "below": "false"
     },
     {
       "category": "transport",
       "achievement": "Viaggiatore",
-      "goal": "4",
+      "goal": "2",
       "below": "false"
     },
     {
       "category": "food",
       "achievement": "Chef",
-      "goal": "4",
+      "goal": "2",
       "below": "false"
     }
   ]

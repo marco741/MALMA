@@ -9,6 +9,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 extension Achievement {
@@ -22,6 +23,38 @@ extension Achievement {
     @NSManaged public var unlocked: Bool
     @NSManaged public var desc: String?
     @NSManaged public var goals: NSSet?
+    
+    func getIcon() -> UIImage?{
+        let iconName = self.image
+        if(!self.unlocked){
+            return UIImage(named: iconName!+"_desaturated")
+        }
+        else{
+            return UIImage(named: iconName!)
+        }
+    }
+    
+    func checkDone() -> Bool{
+        
+        if(self.unlocked){
+            return true
+        }
+        
+        
+        for goal in goals!{
+           let g = goal as! Goal
+            if(!g.checkDone()){
+                return false
+            }
+            
+        }
+        
+        self.unlocked = true
+        PMAchievement.saveContext()
+        
+        return true
+        
+    }
 
 }
 

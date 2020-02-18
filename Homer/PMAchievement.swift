@@ -81,6 +81,50 @@ class PMAchievement{
            
        }
     
+    static func fetchLocked() -> [Achievement]{
+        var achievements: [Achievement] = []
+        
+        let context = getContext()
+        
+        let fetchRequest = NSFetchRequest<Achievement>(entityName: tableName)
+        fetchRequest.predicate = NSPredicate(format: "unlocked = false")
+        
+        do{
+            
+            try achievements = context.fetch(fetchRequest)
+            
+        } catch let error as NSError{
+            
+            print("Errore in fetch \(error.code)")
+            
+        }
+        
+        return achievements
+        
+    }
+    
+    static func fetchUnlocked() -> [Achievement]{
+        var achievements: [Achievement] = []
+        
+        let context = getContext()
+        
+        let fetchRequest = NSFetchRequest<Achievement>(entityName: tableName)
+        fetchRequest.predicate = NSPredicate(format: "unlocked = true")
+        
+        do{
+            
+            try achievements = context.fetch(fetchRequest)
+            
+        } catch let error as NSError{
+            
+            print("Errore in fetch \(error.code)")
+            
+        }
+        
+        return achievements
+        
+    }
+    
     
     
     static func saveContext() {
