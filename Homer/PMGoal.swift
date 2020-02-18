@@ -23,6 +23,7 @@ class PMGoal{
         
     }
     
+    @discardableResult
     static func newGoal(category: String, achivement: Achievement, goalNum: Int32, below: Bool) -> Goal{
         let context = getContext()
         

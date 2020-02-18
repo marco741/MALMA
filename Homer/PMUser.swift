@@ -23,6 +23,7 @@ class PMUser{
         
     }
     
+    @discardableResult
     static func newUser() -> User{
         let context = getContext()
         

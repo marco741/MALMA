@@ -23,6 +23,7 @@ class PMCategory{
         
     }
     
+    @discardableResult
     static func newCategory(imageName: String, name: String) -> Category{
         let context = getContext()
         
