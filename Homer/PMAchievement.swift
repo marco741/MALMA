@@ -23,6 +23,7 @@ class PMAchievement{
         
     }
     
+    @discardableResult
     static func newAchievement(imageName: String, name: String, desc: String) -> Achievement{
         let context = getContext()
         

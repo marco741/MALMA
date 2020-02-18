@@ -72,11 +72,27 @@ class PMTask {
             print("Errore in fetch \(error.code)")
         }
 
-        let tasks2 = tasks.filter { !$0.isChecked() }
-        if(withPriority){
-            return orderWithRandomPriorityPoll(tasks2)
+        var arrayOfId: [Int32]
+
+        if withPriority {
+            if let lastOrderDate = UserDefaults.standard.object(forKey: "lastOrderDate") as? Date {
+                if !Calendar.current.isDateInToday(lastOrderDate) {
+                    tasks = OrderArray.orderWithRandomPriorityPoll(tasks)
+                    arrayOfId = tasks.map {
+                        task in task.id
+                    }
+                    UserDefaults.standard.set(arrayOfId, forKey: "arrayOfId")
+                    UserDefaults.standard.set(Date(), forKey: "lastOrderDate")
+                } else {
+                    if let arrayOfId = UserDefaults.standard.array(forKey: "arrayOfId") as? [Int32] {
+                        if let orderedTasks = OrderArray.orderWithArrayOfId(arrayOfId: arrayOfId, arrayOfTasks: tasks) {
+                            tasks = orderedTasks
+                        }
+                    }
+                }
+            }
         }
-        return tasks2
+        return tasks.filter { !$0.isChecked() }
     }
 
     static func fetchById(id: Int32) -> [Task] {
