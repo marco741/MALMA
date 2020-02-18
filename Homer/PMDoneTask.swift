@@ -251,6 +251,46 @@ class PMDoneTask{
         
     }
     
+    static func fetchDoneTaskOfPreviousWeek(task: Task) -> [DoneTask]{
+           
+            var doneTasks: [DoneTask] = []
+                         
+                          let context = getContext()
+                  
+                          let previuosDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())
+        
+                        var weekday = Calendar.current.component(.weekday, from: previuosDate!)
+                        weekday -= 1
+                        if(weekday == 0 ){
+                            weekday = 7
+                        }
+        
+                        var endDate = Calendar.current.date(byAdding: .day, value: 7-weekday, to: previuosDate!)
+                        endDate =  Calendar.current.date(bySettingHour: 23, minute: 59, second: 59, of: endDate!)
+                          
+                        let dayToSub = -1*(weekday-1)
+                              
+                        var startDate = Calendar.current.date(byAdding: .day, value: dayToSub, to: previuosDate!)
+                         startDate =  Calendar.current.date(bySettingHour: 01, minute: 00, second: 01, of: startDate!)
+                         
+                         let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
+                         fetchRequest.predicate = NSPredicate(format: "doneDate >= %@ AND doneDate <= %@ AND task = %@", startDate! as NSDate,endDate! as NSDate,task)
+                         
+                         do{
+                             
+                             try doneTasks = context.fetch(fetchRequest)
+                             
+                         } catch let error as NSError{
+                             
+                             print("Errore in fetch \(error.code)")
+                             
+                         }
+                         
+                         return doneTasks
+           
+           
+       }
+    
     
     
    /* static func fetchAllDoneTaskOfDay() -> [DoneTask]{
