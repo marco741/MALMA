@@ -26,16 +26,16 @@ class TaskTableViewController: UITableViewController {
         self.tasks = PMTask.fetchUnselectedTask(true)
         self.tableView.reloadData()
         
-        if self.tasks.count == 0 {
-            let title = UILabel(frame: CGRect(x: 0, y: 0, width: 220, height: 10))
-            title.font = UIFont.systemFont(ofSize: 18)
-            title.text = "Hai completato tutti i task!"
-            title.sizeToFit()
-            title.center = self.view.center
-            title.center.y = self.view.center.y
-            title.textAlignment = .center
-            self.view.addSubview(title)
-        }
+//        if self.tasks.count == 0 {
+//            let title = UILabel(frame: CGRect(x: 0, y: 0, width: 220, height: 10))
+//            title.font = UIFont.systemFont(ofSize: 18)
+//            title.text = "Hai completato tutti i task!"
+//            title.sizeToFit()
+//            title.center = self.view.center
+//            title.center.y = self.view.center.y
+//            title.textAlignment = .center
+//            self.view.addSubview(title)
+//        }
     }
     
     // MARK: - Table view data source
