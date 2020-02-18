@@ -102,7 +102,7 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
         let categoryUppercased:String = category.prefix(1).uppercased() + category.dropFirst()
         label.text = categoryUppercased
         label.font = UIFont.boldSystemFont(ofSize: 30.0)
-        label.textColor = UIColor(red: 12/255, green: 97/255, blue: 97/255, alpha: 1.0)
+        label.textColor = UIColor(named: "dark-green")
         header.addSubview(label)
         tableView.tableHeaderView = header
         
@@ -112,14 +112,14 @@ class CategoryTasksViewController: UIViewController, UITableViewDelegate,UITable
         
         segment = UISegmentedControl(items: ["All", "Disabled"])
         segment!.sizeToFit()
-        segment!.tintColor = UIColor(red:0.99, green:0.00, blue:0.25, alpha:1.00)
+        segment!.tintColor = UIColor(named: "dark-green")
         segment!.selectedSegmentIndex = 0;
         segment!.addTarget(self, action: Selector("segmentValueChanged"), for: .valueChanged)
         
         
         self.navigationItem.titleView = segment
 
-        navigationController?.navigationBar.tintColor = UIColor(red: 18/255, green: 148/255, blue: 148/255, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = UIColor(named: "light-green")
 
 
         tableView.delegate = self

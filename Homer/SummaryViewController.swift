@@ -74,7 +74,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         }
         
                    
-        savingsText.text = "\(savings)$"
+        savingsText.text = String(format: "%.2f$", savings)
         ecoPointsText.text = "\(ecoPoints)EP"
         
         achievements = PMAchievement.fetchAllAchievement()
@@ -90,7 +90,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
             let ecoPoints  = PMUser.fetchUser().totEcoPoints
             let savings = PMUser.fetchUser().totSavings
             
-            savingsText.text = "\(savings)$"
+            savingsText.text = String(format: "%.2f$", savings)
             ecoPointsText.text = "\(ecoPoints)EP"
             
             print("first segment")
@@ -99,7 +99,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
             let ecoPoints  = PMUser.fetchUser().getEcoPointsOfMonth()
             let savings = PMUser.fetchUser().getSavingsOfMonth()
             
-            savingsText.text = "\(savings)$"
+            savingsText.text = String(format: "%.2f$", savings)
             ecoPointsText.text = "\(ecoPoints)EP"
             print("second segment")
         case 2:
@@ -107,7 +107,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
             let ecoPoints  = PMUser.fetchUser().getEcoPointsOfDay()
             let savings = PMUser.fetchUser().getSavingsOfDay()
                        
-            savingsText.text = "\(savings)$"
+            savingsText.text = String(format: "%.2f$", savings)
             ecoPointsText.text = "\(ecoPoints)EP"
             
             

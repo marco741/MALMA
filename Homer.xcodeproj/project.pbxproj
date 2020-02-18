@@ -524,7 +524,6 @@
 				6B81B9EA23F6B68C000BFB0A /* CategoriesDataSource.swift in Sources */,
 				33B9D7F023FA8DDC00BE1FEA /* CategoryTasksViewController.swift in Sources */,
 				9A88D59E23FBEC6800FD65BB /* Constants.swift in Sources */,
-				23EFDC5723FADE1400D5F2B9 /* Goal+CoreDataProperties.swift in Sources */,
 				235EF74323F6D1B2006EAD45 /* PMUser.swift in Sources */,
 				23543D0523F45EB60080BDFE /* AppDelegate.swift in Sources */,
 				235EF73423F6D11D006EAD45 /* Category+CoreDataClass.swift in Sources */,
@@ -721,7 +720,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K8WJKQA676;
+				DEVELOPMENT_TEAM = JLT3FC2DXR;
 				INFOPLIST_FILE = Homer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -739,7 +738,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K8WJKQA676;
+				DEVELOPMENT_TEAM = JLT3FC2DXR;
 				INFOPLIST_FILE = Homer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
