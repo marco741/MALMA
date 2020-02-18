@@ -115,7 +115,15 @@ extension Task {
 
     func checkForPriority() {
         if priority > 0 {
-            let doneTasks = PMDoneTask.fetchDoneTaskOfPreviousDay(task: self)
+            
+            var doneTasks:[DoneTask]
+            
+            if(weekly){
+                doneTasks = PMDoneTask.fetchDoneTaskOfPreviousWeek(task: self)
+            }else{
+                doneTasks = PMDoneTask.fetchDoneTaskOfPreviousDay(task: self)
+            }
+            
             if doneTasks.count <= 0 {
                 priority = 0
                 PMTask.saveContext()
