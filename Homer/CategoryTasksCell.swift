@@ -18,9 +18,11 @@ class CategoryTasksCell: UITableViewCell {
     @IBOutlet weak var enableButton: UIButton!
     
     
+    var task: Task?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
         weeklyLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
         checkBox.setImage(UIImage(systemName: "circle"), for: .normal)
         checkBox.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .selected)
@@ -36,36 +38,27 @@ class CategoryTasksCell: UITableViewCell {
     
     
     @IBAction func checkboxPressed(_ sender: Any) {
+        if checkBox.isSelected {
+            task?.unCheck()
+        }
+        else {
+            task?.check()
+        }
         checkBox.isSelected=(!checkBox.isSelected)
     }
+    
     
     @IBAction func enablePressed(_ sender: Any) {
         checkBox.isHidden=false
         enableButton.isHidden=true
+        task?.enable()
+
     }
     
     
     
     
 
-    var task: Task? {
-        willSet{
-            if let cellTask = newValue{
-                print("checked\(cellTask.isChecked())")
-               if(cellTask.isChecked()){
-                   checkBox.isSelected = true
-               }else{
-                   checkBox.isSelected = false
-               }
-                weeklyLabel.isHidden=(!cellTask.weekly)
-                print("weekly: \(cellTask.weekly)")
-                
-               ecoPointsLabel.text = String(cellTask.ecoPoints) + "EP"
-               savingsLabel.text = String(cellTask.savings) + "$"
-               descriptionLabel.text = cellTask.desc
-           }
-       }
-        
-    }
+
 
 }

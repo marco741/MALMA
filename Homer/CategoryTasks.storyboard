@@ -55,7 +55,7 @@
                                                         <action selector="checkboxPressed:" destination="sdV-Y4-NPO" eventType="touchUpInside" id="RRG-k7-gNQ"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-yp-bh4" userLabel="DescriptionLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-yp-bh4" userLabel="DescriptionLabel">
                                                     <rect key="frame" x="67" y="25" width="280" height="85"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="85" id="FRz-c0-h7z"/>
