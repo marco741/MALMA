@@ -48,6 +48,19 @@ class AchievementDetailViewController: UIViewController {
             return
         }
         scene?.background.contents = UIColor(named: "TotalWhiteBlack")
+        
+        if let ach = achievement {
+            navigationItem.title = ach.name
+            achievementDesc.text = ach.desc
+            
+            if(!ach.unlocked){
+                let prizeNode = scene?.rootNode.childNode(withName: "Trophy", recursively: false)
+                for mat in prizeNode?.geometry?.materials ?? []{
+                    print("Modifying material")
+                    mat.diffuse.contents = UIColor(named: "TotalBlackWhite")
+                }
+            }
+        }
     }
 
     /* /Users/marcodellarocca/Documents/Swift Projects/iOS/MALMA/Homer/CategoryTasks.storyboard
