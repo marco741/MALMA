@@ -57,7 +57,7 @@ class PMDoneTask{
     
     static func fetchByTodayAndTask(task: Task) -> [DoneTask]{
         
-        print("controlla task per giorno")
+        
         
         var doneTasks: [DoneTask] = []
                
@@ -117,7 +117,7 @@ class PMDoneTask{
             var startDate = Calendar.current.date(byAdding: .day, value: dayToSub, to: Date())
              startDate =  Calendar.current.date(bySettingHour: 01, minute: 00, second: 01, of: startDate!)
 //
-        print("startDate:\(startDate), endDate:\(endDate), today:\(todayDate)")
+//        print("startDate:\(startDate), endDate:\(endDate), today:\(todayDate)")
         
         
                   let fetchRequest = NSFetchRequest<DoneTask>(entityName: tableName)
@@ -127,7 +127,7 @@ class PMDoneTask{
                       
                       try doneTasks = context.fetch(fetchRequest)
                     
-                    print(doneTasks.count)
+//                    print(doneTasks.count)
                       
                   } catch let error as NSError{
                       

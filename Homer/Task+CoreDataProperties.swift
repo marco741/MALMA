@@ -96,7 +96,6 @@ extension Task {
 
     func isChecked() -> Bool {
         if weekly {
-            print("weekly")
             let doneTasks = PMDoneTask.fetchWeeklyTask(task: self)
 
             if !doneTasks.isEmpty {

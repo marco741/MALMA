@@ -32,11 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Category = \(cat.name!)")
         }
         
-        let tasks = PMTask.fetchAllTask()
+//        let tasks = PMTask.fetchAllTask()
         
-        for task in tasks{
+       /* for task in tasks{
             print("task's description = \(task.desc!) and task's category \(task.category?.name!)")
-        }
+        }*/
         
         
         
