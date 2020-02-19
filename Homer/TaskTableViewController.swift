@@ -54,6 +54,7 @@ class TaskTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskIconCell", for: indexPath) as! TaskCell
         
         cell.task = self.tasks[indexPath.row]
+        cell.WeeklyLabel.isHidden = (!tasks[indexPath.row].weekly)
         
         return cell
     }

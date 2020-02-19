@@ -16,6 +16,7 @@ class TaskCell: UITableViewCell {
     @IBOutlet var SavingsText: UILabel!
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
+    @IBOutlet var WeeklyLabel: UILabel!
     
     var checked = false
     
@@ -48,7 +49,8 @@ class TaskCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+        
+        WeeklyLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
         CheckButton.setImage(UIImage(systemName: "circle"), for: .normal)
         CheckButton.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .selected)
         CheckButton.isSelected = false

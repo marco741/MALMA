@@ -92,6 +92,14 @@
                                                 <action selector="checkPressed:" destination="Gg0-7T-d5a" eventType="touchUpInside" id="hVn-5l-Djt"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="               Weekly          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYF-b2-iRx">
+                                            <rect key="frame" x="310" y="11" width="150" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.87843137250000003" green="0.74901960779999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" name="TotalWhiteBlack"/>
                                     <constraints>
@@ -117,6 +125,7 @@
                                     <outlet property="DescriptionText" destination="opK-Pf-uGV" id="5U6-J5-Teb"/>
                                     <outlet property="EcoPointsText" destination="JoH-ZX-o1N" id="gW3-jy-RSu"/>
                                     <outlet property="SavingsText" destination="wX0-fc-vZJ" id="gRT-zE-Vi3"/>
+                                    <outlet property="WeeklyLabel" destination="RYF-b2-iRx" id="wFW-uk-B1j"/>
                                     <outlet property="categoryIcon" destination="pEc-yZ-ZNf" id="6gl-gH-Ynb"/>
                                 </connections>
                             </tableViewCell>
