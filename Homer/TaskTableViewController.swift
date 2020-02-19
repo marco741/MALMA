@@ -10,10 +10,40 @@ import UIKit
 
 class TaskTableViewController: UITableViewController {
     var tasks: [Task] = []
+//    NotificationCenter.default.addObserver(self, selector: #selector(self.reciveAchievementNotify(), name: Notification.Name("PremioRicevuto"), object: nil)
+    
+    @objc
+    func reciveAchievementNotify(notification: Notification){
+        
+        if let dict = notification.userInfo as NSDictionary?{
+            if let achievement = dict["achievement"] as? Achievement{
+                
+                let showAlert = UIAlertController(title: "Congratulations! You unlocked the achievement: \(achievement.name ?? "")", message: nil, preferredStyle: .alert)
+                let imageView = UIImageView(frame: CGRect(x: 60, y: 100, width: 150, height: 150))
+                imageView.image = UIImage(named: achievement.image ?? "")// Your image here...
+                showAlert.view.addSubview(imageView)
+                let height = NSLayoutConstraint(item: showAlert.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 320)
+                let width = NSLayoutConstraint(item: showAlert.view!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+                showAlert.view.addConstraint(height)
+                showAlert.view.addConstraint(width)
+                showAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action in
+                    // your actions here...
+                }))
+                
+                self.present(showAlert, animated: true, completion: nil)
+                
+            }
+            
+        }
+        
+        
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reciveAchievementNotify(notification:)), name: Notification.Name("PremioRicevuto"), object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -25,6 +55,8 @@ class TaskTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tasks = PMTask.fetchUnselectedTask(true)
         self.tableView.reloadData()
+        
+        
         
 //        if self.tasks.count == 0 {
 //            let title = UILabel(frame: CGRect(x: 0, y: 0, width: 220, height: 10))

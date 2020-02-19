@@ -52,6 +52,12 @@ extension Task {
         for achievement in achievements {
             if achievement.checkDone() {
                 print("premio ricevuto")
+                
+                let ac:[String: Achievement] = ["achievement": achievement]
+                
+                NotificationCenter.default.post(name: Notification.Name("PremioRicevuto"), object: nil, userInfo: ac)
+                
+                
             }
         }
     }
