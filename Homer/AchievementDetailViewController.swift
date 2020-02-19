@@ -19,15 +19,22 @@ class AchievementDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scene = SCNScene(named: "cube.scn")
+        scene = SCNScene(named: "water_medal_bronze.scn")
 
         if let ach = achievement {
             navigationItem.title = ach.name
             achievementDesc.text = ach.desc
+            
+            if(!ach.unlocked){
+                let prizeNode = scene?.rootNode.childNode(withName: "Trophy", recursively: false)
+                for mat in prizeNode?.geometry?.materials ?? []{
+                    print("Modifying material")
+                    mat.diffuse.contents = UIColor(named: "TotalBlackWhite")
+                }
+            }
         }
 
         detailSceneView.allowsCameraControl = true
-        detailSceneView.showsStatistics = false
         detailSceneView.cameraControlConfiguration.allowsTranslation = false
         scene?.background.contents = UIColor(named: "TotalWhiteBlack")
         detailSceneView.scene = scene

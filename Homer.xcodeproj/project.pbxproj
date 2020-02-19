@@ -58,6 +58,7 @@
 		90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4223F5AF8A00926738 /* TaskCollection.swift */; };
 		90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */; };
 		90AB077823F85D1B00D930D5 /* cube.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90AB077723F85D1B00D930D5 /* cube.scn */; };
+		90F44B8823FD34A500AC3AEE /* water_medal_bronze.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90F44B8723FD34A500AC3AEE /* water_medal_bronze.scn */; };
 		9A88D59C23FBEB0300FD65BB /* OrderArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88D59B23FBEB0300FD65BB /* OrderArray.swift */; };
 		9A88D59E23FBEC6800FD65BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88D59D23FBEC6800FD65BB /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -137,6 +138,7 @@
 		90259D4223F5AF8A00926738 /* TaskCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollection.swift; sourceTree = "<group>"; };
 		90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
 		90AB077723F85D1B00D930D5 /* cube.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cube.scn; sourceTree = "<group>"; };
+		90F44B8723FD34A500AC3AEE /* water_medal_bronze.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = water_medal_bronze.scn; sourceTree = "<group>"; };
 		9A88D59B23FBEB0300FD65BB /* OrderArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArray.swift; sourceTree = "<group>"; };
 		9A88D59D23FBEC6800FD65BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				90AB077723F85D1B00D930D5 /* cube.scn */,
+				90F44B8723FD34A500AC3AEE /* water_medal_bronze.scn */,
 				6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */,
 				90048EC523F6F26F0089600B /* SummaryViewController.swift */,
 				90048EC723F6F4450089600B /* AchievementCell.swift */,
@@ -481,6 +484,7 @@
 				33B9D7EE23FA8D6300BE1FEA /* CategoryTasks.storyboard in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
+				90F44B8823FD34A500AC3AEE /* water_medal_bronze.scn in Resources */,
 				2357615A23F9E07900C1D41F /* goal.json in Resources */,
 				6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */,
 			);
