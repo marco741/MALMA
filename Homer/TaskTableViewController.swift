@@ -87,6 +87,7 @@ class TaskTableViewController: UITableViewController {
         
         cell.task = self.tasks[indexPath.row]
         cell.WeeklyLabel.isHidden = (!tasks[indexPath.row].weekly)
+        cell.CategoryIcon.tag = indexPath.row
         
         return cell
     }
@@ -166,13 +167,28 @@ class TaskTableViewController: UITableViewController {
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          // Get the new view controller using segue.destination.
          // Pass the selected object to the new view controller.
+        
+        let button = sender as! UIButton
+        let index = button.tag
+        
+        switch segue.identifier{
+            case "showCategory" :
+                
+               if  let category = tasks[index].category?.name {
+                       let dstview = segue.destination as! CategoryTasksViewController
+                      dstview.category=category
+                }
+
+              
+              default:
+                  print(#function)
+        }
      }
-     */
 }

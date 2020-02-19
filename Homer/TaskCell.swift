@@ -11,13 +11,14 @@ import UIKit
 class TaskCell: UITableViewCell {
 
     
-    @IBOutlet var CategoryIcon: UIImageView!
+//    @IBOutlet var CategoryIcon: UIImageView!
+    
     @IBOutlet var EcoPointsText: UILabel!
     @IBOutlet var SavingsText: UILabel!
     @IBOutlet var DescriptionText: UILabel!
     @IBOutlet var CheckButton: UIButton!
     @IBOutlet var WeeklyLabel: UILabel!
-    
+    @IBOutlet var CategoryIcon: UIButton!
     var checked = false
     
     var task : Task? {
@@ -25,11 +26,11 @@ class TaskCell: UITableViewCell {
             if let cellTask = newValue{
                 print("checked\(cellTask.isChecked())")
                 if(cellTask.isChecked()){
-                    CategoryIcon.image = cellTask.getIcon(true)
+                    CategoryIcon.setImage(cellTask.getIcon(true), for: .normal)
                     CheckButton.isSelected = true
                     checked = true
                 }else{
-                    CategoryIcon.image = cellTask.getIcon(false)
+                    CategoryIcon.setImage(cellTask.getIcon(false), for: .normal)
                     CheckButton.isSelected = false
                     checked = false
                 }
@@ -75,6 +76,6 @@ class TaskCell: UITableViewCell {
         }
         CheckButton.isSelected.toggle()
         completed = !completed
-        CategoryIcon.image = task?.getIcon(checked)
+        CategoryIcon.setImage(task?.getIcon(checked), for: .normal)
     }
 }

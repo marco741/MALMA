@@ -44,15 +44,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEc-yZ-ZNf">
-                                            <rect key="frame" x="164.5" y="31" width="85" height="85"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="85" id="of5-WV-my4"/>
-                                                <constraint firstAttribute="height" constant="85" id="wZM-7t-Keh"/>
-                                            </constraints>
-                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8h-tT-Qmm" userLabel="Separator">
-                                            <rect key="frame" x="132" y="144.5" width="150" height="1"/>
+                                            <rect key="frame" x="132" y="136" width="150" height="1"/>
                                             <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="DkJ-gN-yRf"/>
@@ -72,7 +65,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiudi i denti mentre lavi l'acqua" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opK-Pf-uGV" userLabel="DescriptionText">
-                                            <rect key="frame" x="67" y="155.5" width="280" height="24"/>
+                                            <rect key="frame" x="67" y="147" width="280" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -100,11 +93,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-27-lxg" userLabel="CategoryIcon">
+                                            <rect key="frame" x="164.5" y="31" width="85" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="85" id="Ac5-Aq-FLY"/>
+                                                <constraint firstAttribute="height" constant="85" id="U2E-BE-XN3"/>
+                                            </constraints>
+                                            <connections>
+                                                <segue destination="gbk-c4-CZw" kind="show" identifier="showCategory" id="r4e-Hg-Vux"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="TotalWhiteBlack"/>
                                     <constraints>
                                         <constraint firstItem="nLi-Lb-m2z" firstAttribute="bottom" secondItem="gda-2Q-2bP" secondAttribute="bottomMargin" id="2Vy-jK-EPk"/>
-                                        <constraint firstItem="pEc-yZ-ZNf" firstAttribute="top" secondItem="gda-2Q-2bP" secondAttribute="topMargin" constant="20" id="3uc-GX-6SC"/>
                                         <constraint firstItem="opK-Pf-uGV" firstAttribute="centerX" secondItem="gda-2Q-2bP" secondAttribute="centerX" id="EzC-HN-Hwu"/>
                                         <constraint firstItem="opK-Pf-uGV" firstAttribute="top" secondItem="v8h-tT-Qmm" secondAttribute="bottom" constant="10" id="GDO-8F-X0i"/>
                                         <constraint firstItem="v8h-tT-Qmm" firstAttribute="centerX" secondItem="gda-2Q-2bP" secondAttribute="centerX" id="H8B-ka-Lxj"/>
@@ -112,21 +114,21 @@
                                         <constraint firstItem="nLi-Lb-m2z" firstAttribute="centerX" secondItem="opK-Pf-uGV" secondAttribute="centerX" id="Nf9-Fd-ZhN"/>
                                         <constraint firstAttribute="bottom" secondItem="JoH-ZX-o1N" secondAttribute="bottom" constant="20" id="QH4-Z5-dvO"/>
                                         <constraint firstAttribute="bottom" secondItem="wX0-fc-vZJ" secondAttribute="bottom" constant="20" id="Txt-1U-cjg"/>
-                                        <constraint firstItem="v8h-tT-Qmm" firstAttribute="top" secondItem="pEc-yZ-ZNf" secondAttribute="bottom" constant="28.5" id="WjR-C7-bWx"/>
                                         <constraint firstAttribute="trailing" secondItem="JoH-ZX-o1N" secondAttribute="trailing" constant="20" id="X0E-06-FXJ"/>
-                                        <constraint firstItem="pEc-yZ-ZNf" firstAttribute="centerX" secondItem="gda-2Q-2bP" secondAttribute="centerX" id="f3v-Oe-xjt"/>
+                                        <constraint firstItem="bbp-27-lxg" firstAttribute="centerX" secondItem="gda-2Q-2bP" secondAttribute="centerX" id="dWd-dN-pwK"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="opK-Pf-uGV" secondAttribute="trailing" constant="47" id="iW5-iN-xMN"/>
                                         <constraint firstItem="opK-Pf-uGV" firstAttribute="leading" secondItem="gda-2Q-2bP" secondAttribute="leadingMargin" constant="47" id="tba-eS-je3"/>
+                                        <constraint firstItem="bbp-27-lxg" firstAttribute="top" secondItem="gda-2Q-2bP" secondAttribute="topMargin" constant="20" id="vK7-rl-i7D"/>
+                                        <constraint firstItem="v8h-tT-Qmm" firstAttribute="top" secondItem="bbp-27-lxg" secondAttribute="bottom" constant="20" id="zWv-wJ-UJR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="CategoryIcon" destination="pEc-yZ-ZNf" id="lO5-RR-aLE"/>
+                                    <outlet property="CategoryIcon" destination="bbp-27-lxg" id="Hyz-Ts-vWE"/>
                                     <outlet property="CheckButton" destination="nLi-Lb-m2z" id="fFH-Ci-QiL"/>
                                     <outlet property="DescriptionText" destination="opK-Pf-uGV" id="5U6-J5-Teb"/>
                                     <outlet property="EcoPointsText" destination="JoH-ZX-o1N" id="gW3-jy-RSu"/>
                                     <outlet property="SavingsText" destination="wX0-fc-vZJ" id="gRT-zE-Vi3"/>
                                     <outlet property="WeeklyLabel" destination="RYF-b2-iRx" id="wFW-uk-B1j"/>
-                                    <outlet property="categoryIcon" destination="pEc-yZ-ZNf" id="6gl-gH-Ynb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -194,6 +196,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2m-YQ-Jdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-342" y="-864"/>
+        </scene>
+        <!--CategoryTasks-->
+        <scene sceneID="Yus-Y3-Q9p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CategoryTasks" id="gbk-c4-CZw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9Vi-hn-0rd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qrg-b4-AQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="-1527"/>
         </scene>
     </scenes>
     <resources>

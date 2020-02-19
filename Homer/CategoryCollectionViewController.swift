@@ -56,7 +56,7 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
                 print(#function)
         
         }
-            }
+    }
      
     
 
