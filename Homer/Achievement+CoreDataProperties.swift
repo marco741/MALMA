@@ -25,14 +25,28 @@ extension Achievement {
     @NSManaged public var goals: NSSet?
     
     func getIcon() -> UIImage?{
+        getIcon(saturated: self.unlocked)
+    }
+    
+    func getIcon(saturated: Bool) -> UIImage?{
         let iconName = self.image
-        if(!self.unlocked){
-            return UIImage(named: iconName!+"_desaturated")
+        if(!saturated){
+            return UIImage(named: iconName!+"MedalIconDesaturated")
         }
         else{
-            return UIImage(named: iconName!)
+            return UIImage(named: iconName!+"MedalIcon")
         }
     }
+    
+//    func getMedalIcon() -> UIImage?{
+//        let iconName = self.image
+//         if(!self.unlocked){
+//             return UIImage(named: iconName! + "MedalIconDesaturated")
+//         }
+//         else{
+//             return UIImage(named: iconName! + "MedalIcon")
+//         }
+//    }
     
     func checkDone() -> Bool{
         

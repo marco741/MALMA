@@ -20,7 +20,7 @@ class TaskTableViewController: UITableViewController {
                 
                 let showAlert = UIAlertController(title: "Congratulations! You unlocked the achievement: \(achievement.name ?? "")", message: nil, preferredStyle: .alert)
                 let imageView = UIImageView(frame: CGRect(x: 60, y: 100, width: 150, height: 150))
-                imageView.image = UIImage(named: achievement.image ?? "")// Your image here...
+                imageView.image = achievement.getIcon(saturated: true)
                 showAlert.view.addSubview(imageView)
                 let height = NSLayoutConstraint(item: showAlert.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 320)
                 let width = NSLayoutConstraint(item: showAlert.view!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)

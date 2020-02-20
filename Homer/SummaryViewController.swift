@@ -30,6 +30,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegate,UICollec
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
         
+        
         cell.cellImage.image = achievements[indexPath.row].getIcon()
         
         return cell

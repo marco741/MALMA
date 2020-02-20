@@ -19,16 +19,15 @@ class AchievementDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scene = SCNScene(named: "water_medal_bronze.scn")
-
         if let ach = achievement {
+            
+            scene = SCNScene(named: ach.image!+"Medal.scn")
             navigationItem.title = ach.name
             achievementDesc.text = ach.desc
-            
+
             if(!ach.unlocked){
                 let prizeNode = scene?.rootNode.childNode(withName: "Trophy", recursively: false)
                 for mat in prizeNode?.geometry?.materials ?? []{
-                    print("Modifying material")
                     mat.diffuse.contents = UIColor(named: "TotalBlackWhite")
                 }
             }
@@ -47,6 +46,7 @@ class AchievementDetailViewController: UIViewController {
         guard UIApplication.shared.applicationState == .inactive else {
             return
         }
+        
         scene?.background.contents = UIColor(named: "TotalWhiteBlack")
         
         if let ach = achievement {
@@ -56,7 +56,6 @@ class AchievementDetailViewController: UIViewController {
             if(!ach.unlocked){
                 let prizeNode = scene?.rootNode.childNode(withName: "Trophy", recursively: false)
                 for mat in prizeNode?.geometry?.materials ?? []{
-                    print("Modifying material")
                     mat.diffuse.contents = UIColor(named: "TotalBlackWhite")
                 }
             }

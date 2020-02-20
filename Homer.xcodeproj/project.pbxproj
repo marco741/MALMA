@@ -56,6 +56,11 @@
 		90259D3F23F5A2C000926738 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D3E23F5A2C000926738 /* TaskTableViewController.swift */; };
 		90259D4123F5A30E00926738 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4023F5A30E00926738 /* TaskCell.swift */; };
 		90259D4323F5AF8A00926738 /* TaskCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90259D4223F5AF8A00926738 /* TaskCollection.swift */; };
+		904B583223FF0A5C009D26C5 /* energyMedal.scn in Resources */ = {isa = PBXBuildFile; fileRef = 904B583123FF0A5C009D26C5 /* energyMedal.scn */; };
+		904B583423FF0A74009D26C5 /* foodMedal.scn in Resources */ = {isa = PBXBuildFile; fileRef = 904B583323FF0A74009D26C5 /* foodMedal.scn */; };
+		904B583623FF0A8A009D26C5 /* garbageMedal.scn in Resources */ = {isa = PBXBuildFile; fileRef = 904B583523FF0A8A009D26C5 /* garbageMedal.scn */; };
+		904B583823FF0A99009D26C5 /* transportMedal.scn in Resources */ = {isa = PBXBuildFile; fileRef = 904B583723FF0A99009D26C5 /* transportMedal.scn */; };
+		904B583A23FF0AA7009D26C5 /* waterMedal.scn in Resources */ = {isa = PBXBuildFile; fileRef = 904B583923FF0AA7009D26C5 /* waterMedal.scn */; };
 		90AB077023F8390000D930D5 /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */; };
 		90AB077823F85D1B00D930D5 /* cube.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90AB077723F85D1B00D930D5 /* cube.scn */; };
 		90F44B8823FD34A500AC3AEE /* water_medal_bronze.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90F44B8723FD34A500AC3AEE /* water_medal_bronze.scn */; };
@@ -82,7 +87,7 @@
 
 /* Begin PBXFileReference section */
 		235307C823F708ED002EBD1F /* Homer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homer.xcdatamodel; sourceTree = "<group>"; };
-		23543D0123F45EB60080BDFE /* Homer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23543D0123F45EB60080BDFE /* Greenist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greenist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23543D0423F45EB60080BDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23543D0623F45EB60080BDFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		23543D0823F45EB60080BDFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +141,11 @@
 		90259D3E23F5A2C000926738 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		90259D4023F5A30E00926738 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		90259D4223F5AF8A00926738 /* TaskCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollection.swift; sourceTree = "<group>"; };
+		904B583123FF0A5C009D26C5 /* energyMedal.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = energyMedal.scn; sourceTree = "<group>"; };
+		904B583323FF0A74009D26C5 /* foodMedal.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = foodMedal.scn; sourceTree = "<group>"; };
+		904B583523FF0A8A009D26C5 /* garbageMedal.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = garbageMedal.scn; sourceTree = "<group>"; };
+		904B583723FF0A99009D26C5 /* transportMedal.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = transportMedal.scn; sourceTree = "<group>"; };
+		904B583923FF0AA7009D26C5 /* waterMedal.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = waterMedal.scn; sourceTree = "<group>"; };
 		90AB076F23F8390000D930D5 /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
 		90AB077723F85D1B00D930D5 /* cube.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cube.scn; sourceTree = "<group>"; };
 		90F44B8723FD34A500AC3AEE /* water_medal_bronze.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = water_medal_bronze.scn; sourceTree = "<group>"; };
@@ -181,7 +191,7 @@
 		23543D0223F45EB60080BDFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23543D0123F45EB60080BDFE /* Homer.app */,
+				23543D0123F45EB60080BDFE /* Greenist.app */,
 				23543D1A23F45EB70080BDFE /* HomerTests.xctest */,
 				23543D2523F45EB70080BDFE /* HomerUITests.xctest */,
 			);
@@ -295,6 +305,7 @@
 		6B81B9E623F6ABDB000BFB0A /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				908FB52D23FEF59E007C5676 /* Achievement Models */,
 				90AB077723F85D1B00D930D5 /* cube.scn */,
 				90F44B8723FD34A500AC3AEE /* water_medal_bronze.scn */,
 				6B81B9E723F6ABE6000BFB0A /* Summary.storyboard */,
@@ -304,6 +315,18 @@
 				6B5CA63123FAD08F0059D9BB /* AchievementContentView.swift */,
 			);
 			name = Summary;
+			sourceTree = "<group>";
+		};
+		908FB52D23FEF59E007C5676 /* Achievement Models */ = {
+			isa = PBXGroup;
+			children = (
+				904B583123FF0A5C009D26C5 /* energyMedal.scn */,
+				904B583323FF0A74009D26C5 /* foodMedal.scn */,
+				904B583523FF0A8A009D26C5 /* garbageMedal.scn */,
+				904B583723FF0A99009D26C5 /* transportMedal.scn */,
+				904B583923FF0AA7009D26C5 /* waterMedal.scn */,
+			);
+			name = "Achievement Models";
 			sourceTree = "<group>";
 		};
 		9099D75A23FAA0110063C588 /* AchievementModels */ = {
@@ -387,7 +410,7 @@
 			);
 			name = Homer;
 			productName = Homer;
-			productReference = 23543D0123F45EB60080BDFE /* Homer.app */;
+			productReference = 23543D0123F45EB60080BDFE /* Greenist.app */;
 			productType = "com.apple.product-type.application";
 		};
 		23543D1923F45EB70080BDFE /* HomerTests */ = {
@@ -474,18 +497,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904B583623FF0A8A009D26C5 /* garbageMedal.scn in Resources */,
 				235EF74A23F6DB3C006EAD45 /* categories.json in Resources */,
+				904B583A23FF0AA7009D26C5 /* waterMedal.scn in Resources */,
 				6B81B9E523F6ABD4000BFB0A /* Categories.storyboard in Resources */,
 				6B81B9E823F6ABE6000BFB0A /* Summary.storyboard in Resources */,
 				2357615823F9DE9D00C1D41F /* achievement.json in Resources */,
 				23543D1423F45EB60080BDFE /* LaunchScreen.storyboard in Resources */,
 				235EF74C23F6DD7D006EAD45 /* task.json in Resources */,
+				904B583823FF0A99009D26C5 /* transportMedal.scn in Resources */,
 				90AB077823F85D1B00D930D5 /* cube.scn in Resources */,
 				33B9D7EE23FA8D6300BE1FEA /* CategoryTasks.storyboard in Resources */,
 				23543D1123F45EB60080BDFE /* Assets.xcassets in Resources */,
 				23543D0C23F45EB60080BDFE /* Main.storyboard in Resources */,
+				904B583423FF0A74009D26C5 /* foodMedal.scn in Resources */,
 				90F44B8823FD34A500AC3AEE /* water_medal_bronze.scn in Resources */,
 				2357615A23F9E07900C1D41F /* goal.json in Resources */,
+				904B583223FF0A5C009D26C5 /* energyMedal.scn in Resources */,
 				6B81B9D823F59BBF000BFB0A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,8 +758,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = malma.Homer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = malma.Greenist;
+				PRODUCT_NAME = Greenist;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -748,8 +776,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = malma.Homer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = malma.Greenist;
+				PRODUCT_NAME = Greenist;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
