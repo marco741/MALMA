@@ -24,21 +24,46 @@ class PMGoal{
     }
     
     @discardableResult
-    static func newGoal(category: String, achivement: Achievement, goalNum: Int32, below: Bool) -> Goal{
+    static func newGoal(category: String, achievement: Achievement, goalNum: Int32, below: Bool) -> Goal{
         let context = getContext()
         
         let goal = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Goal
         
+        goal.achievementName = achievement.name
         goal.goal =  goalNum
         goal.task = nil
         goal.category = category
         goal.below = below
-        goal.achivement = achivement
+        goal.achievement = achievement
         goal.done = false
         
         
         return goal
     }
+    
+    
+    static func fetchByAchievementName(name: String) -> [Goal]{
+        var goals: [Goal] = []
+        
+        let context = getContext()
+        
+        let fetchRequest = NSFetchRequest<Goal>(entityName: tableName)
+        fetchRequest.predicate = NSPredicate(format: "achievementName = %@", name)
+        
+        do{
+            
+            try goals = context.fetch(fetchRequest)
+            
+        } catch let error as NSError{
+            
+            print("Errore in fetch \(error.code)")
+            
+        }
+        
+        return goals
+        
+    }
+    
     
     static func fetchAllGoal() -> [Goal]{
         var goals: [Goal] = []

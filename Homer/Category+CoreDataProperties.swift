@@ -24,6 +24,10 @@ extension Category {
     func addTask(task: Task){
         self.addToTasks(task)
     }
+    
+    func removeTask(task: Task){
+        self.removeFromTasks(task)
+    }
 
 }
 

@@ -2,7 +2,7 @@
 //  Goal+CoreDataProperties.swift
 //  Homer
 //
-//  Created by Lorenzo Fasolino on 18/02/2020.
+//  Created by Marco Della Rocca on 09/05/2020.
 //  Copyright © 2020 Lorenzo Fasolino. All rights reserved.
 //
 //
@@ -19,9 +19,10 @@ extension Goal {
 
     @NSManaged public var below: Bool
     @NSManaged public var category: String?
-    @NSManaged public var goal: Int32
     @NSManaged public var done: Bool
-    @NSManaged public var achivement: Achievement?
+    @NSManaged public var goal: Int32
+    @NSManaged public var achievementName: String?
+    @NSManaged public var achievement: Achievement?
     @NSManaged public var task: Task?
     
     func checkDone() -> Bool{

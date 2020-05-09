@@ -20,7 +20,7 @@ class PMTask {
         return appDelegate.persistentContainer.viewContext
     }
 
-    static func newTask(id: Int32, desc: String, ecoPoint: Int32, savings: Float, state: String, weekly: Bool, categoty: Category) -> Task {
+    static func newTask(id: Int32, desc: String, ecoPoint: Int32, savings: Float, state: String, weekly: Bool, category: Category) -> Task {
         let context = getContext()
 
         let task = NSEntityDescription.insertNewObject(forEntityName: tableName, into: context) as! Task
@@ -32,7 +32,7 @@ class PMTask {
         task.savings = savings
         task.state = state
         task.weekly = weekly
-        task.category = categoty
+        task.category = category
         task.priority = 0
 
         task.goals = NSSet()

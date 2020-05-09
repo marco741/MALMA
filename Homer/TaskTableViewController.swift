@@ -109,6 +109,7 @@ class TaskTableViewController: UITableViewController {
      } */
     
     @IBAction func refresh(_ sender: Any) {
+        Populator.populateDB()
         self.tasks = PMTask.fetchUnselectedTask(true)
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
